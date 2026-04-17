@@ -1,0 +1,1872 @@
+<!DOCTYPE html>
+<html lang="el">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ν.Ο.Α. — Ναυτικός Όμιλος Αλίμου</title>
+  <meta name="description" content="Ναυτικός Όμιλος Αλίμου — Ιστιοπλοΐα, SUP, Windsurf, Kayak και Bic Techno 293 στην Παραλία Αλίμου. Αρ. Μητρώου 51.">
+  <meta name="keywords" content="Ναυτικός Όμιλος Αλίμου, NOA, ΝΟΑ, ιστιοπλοΐα Άλιμος, SUP Άλιμος, windsurf Αλίμου, kayak Σαρωνικός, θαλάσσια αθλήματα Αθήνα, sailing club Athens, Bic Techno 293, ILCA, Optimist">
+  <meta name="author" content="Ναυτικός Όμιλος Αλίμου">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://www.noalimou.gr/">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Ν.Ο.Α. — Ναυτικός Όμιλος Αλίμου">
+  <meta property="og:description" content="Ιστιοπλοΐα, SUP, Windsurf, Kayak και Bic Techno 293 στην Παραλία Αλίμου. Γίνε μέλος!">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://www.noalimou.gr/">
+  <meta property="og:image" content="https://images.unsplash.com/photo-1602877641253-3a985752a0d4?w=1200&q=80">
+  <meta property="og:locale" content="el_GR">
+  <meta property="og:site_name" content="Ναυτικός Όμιλος Αλίμου">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Ν.Ο.Α. — Ναυτικός Όμιλος Αλίμου">
+  <meta name="twitter:description" content="Θαλάσσια αθλήματα στην Παραλία Αλίμου — Ιστιοπλοΐα, SUP, Windsurf, Kayak, Bic Techno 293">
+  <meta name="twitter:image" content="https://images.unsplash.com/photo-1602877641253-3a985752a0d4?w=1200&q=80">
+
+  <!-- Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "SportsClub",
+    "name": "Ναυτικός Όμιλος Αλίμου",
+    "alternateName": "Ν.Ο.Α.",
+    "url": "https://www.noalimou.gr",
+    "email": "info@noalimou.gr",
+    "telephone": "+302109838358",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Παλαιά Λουτρά Αλίμου, Παραλία Αλίμου",
+      "addressLocality": "Άλιμος",
+      "addressRegion": "Αττική",
+      "addressCountry": "GR"
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": 37.91,
+      "longitude": 23.71
+    },
+    "sport": ["Sailing", "Stand Up Paddleboarding", "Windsurfing", "Kayaking", "Athletics"],
+    "sameAs": [
+      "https://www.instagram.com/noalimou"
+    ]
+  }
+  </script>
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%E2%9B%B5%3C/text%3E%3C/svg%3E">
+  <meta name="theme-color" content="#1A3A6B">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400&family=DM+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+
+  <style>
+    /* ========================================
+       CSS CUSTOM PROPERTIES
+       ======================================== */
+    :root {
+      /* Colors — NOA Brand Blue (from official burgee) */
+      --navy-deep: #0A1628;
+      --navy: #1A3A6B;
+      --navy-mid: #2558A0;
+      --navy-light: #3470BD;
+      --teal: #2E6EB5;
+      --teal-light: #4A90D9;
+      --teal-glow: rgba(46, 110, 181, 0.15);
+      --gold: #E8A838;
+      --gold-light: #F5C563;
+      --white: #FFFFFF;
+      --off-white: #F2F6FA;
+      --gray-100: #E4EAF2;
+      --gray-200: #C5D0DE;
+      --gray-400: #7E8FA3;
+      --gray-600: #4A5568;
+      --coral: #FF6B6B;
+      --noa-blue: #2E6EB5;
+      --font-display: 'Cormorant Garamond', Georgia, 'Times New Roman', serif;
+      --font-body: 'DM Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+      --section-pad: clamp(4rem, 8vw, 8rem);
+      --container-max: 1280px;
+      --gap: clamp(1rem, 2vw, 2rem);
+      --ease-out: cubic-bezier(0.22, 1, 0.36, 1);
+      --transition: 0.4s var(--ease-out);
+    }
+
+    /* ========================================
+       MODERN CSS ENHANCEMENTS
+       ======================================== */
+    /* Animated wave divider between sections */
+    .wave-divider {
+      position: relative; width: 100%; overflow: hidden; line-height: 0;
+      margin-top: -1px;
+    }
+    .wave-divider svg { position: relative; display: block; width: 100%; height: 80px; }
+    .wave-divider--flip { transform: rotate(180deg); margin-bottom: -1px; margin-top: 0; }
+
+    /* Animated wave path */
+    @keyframes waveMove {
+      0% { transform: translateX(0); }
+      100% { transform: translateX(-50%); }
+    }
+    .wave-path { animation: waveMove 8s linear infinite; }
+
+    /* Glass card effect */
+    .glass {
+      background: rgba(255,255,255,0.08); backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px); border: 1px solid rgba(255,255,255,0.12);
+    }
+
+    /* Counter animation */
+    .counter { display: inline-block; }
+
+    /* Gradient text utility */
+    .gradient-text {
+      background: linear-gradient(135deg, var(--teal-light), var(--gold));
+      -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
+    }
+
+    /* Parallax helper */
+    @supports (animation-timeline: scroll()) {
+      .parallax-slow {
+        animation: parallaxUp linear both;
+        animation-timeline: scroll();
+        animation-range: entry 0% exit 100%;
+      }
+      @keyframes parallaxUp {
+        from { transform: translateY(30px); }
+        to { transform: translateY(-30px); }
+      }
+    }
+
+    /* Glow hover effect */
+    .glow-hover { position: relative; overflow: hidden; }
+    .glow-hover::before {
+      content: ''; position: absolute; top: 50%; left: 50%; width: 0; height: 0;
+      background: radial-gradient(circle, var(--teal-glow), transparent 70%);
+      border-radius: 50%; transition: width 0.6s var(--ease-out), height 0.6s var(--ease-out);
+      transform: translate(-50%, -50%); z-index: 0; pointer-events: none;
+    }
+    .glow-hover:hover::before { width: 300px; height: 300px; }
+
+    /* Noise texture overlay */
+    body::before {
+      content: ''; position: fixed; inset: 0; z-index: 9999; pointer-events: none;
+      opacity: 0.015;
+      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E");
+      background-repeat: repeat; background-size: 256px 256px;
+    }
+
+    /* Smooth cursor trail for interactive feel */
+    .sport-card, .event-card, .news-card, .membership-card, .gallery__item {
+      will-change: transform;
+    }
+
+    /* Accessibility */
+    :focus-visible {
+      outline: 2px solid var(--teal);
+      outline-offset: 2px;
+    }
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+      }
+      .reveal { opacity: 1; transform: none; }
+    }
+
+    /* ========================================
+       RESET & BASE
+       ======================================== */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; font-size: 16px; }
+    body { font-family: var(--font-body); color: var(--navy); background: var(--white); line-height: 1.7; overflow-x: hidden; -webkit-font-smoothing: antialiased; }
+    img { max-width: 100%; height: auto; display: block; }
+    a { color: inherit; text-decoration: none; }
+    .container { width: 90%; max-width: var(--container-max); margin: 0 auto; }
+
+    .section-label {
+      font-family: var(--font-body); font-size: 0.75rem; font-weight: 600;
+      letter-spacing: 0.25em; text-transform: uppercase; color: var(--teal); margin-bottom: 0.75rem;
+    }
+    .section-title {
+      font-family: var(--font-display); font-size: clamp(2rem, 4vw, 3.2rem);
+      font-weight: 700; line-height: 1.15; color: var(--navy); margin-bottom: 1rem;
+    }
+    .section-title--light { color: var(--white); }
+    .section-subtitle { font-size: 1.05rem; color: var(--gray-600); max-width: 600px; line-height: 1.8; }
+    .section-subtitle--light { color: var(--gray-200); }
+
+    /* Buttons */
+    .btn {
+      display: inline-flex; align-items: center; gap: 0.5rem; padding: 0.85rem 2rem;
+      font-family: var(--font-body); font-size: 0.9rem; font-weight: 600;
+      letter-spacing: 0.04em; border: none; border-radius: 60px; cursor: pointer;
+      transition: var(--transition); text-decoration: none;
+    }
+    .btn--primary { background: var(--teal); color: var(--white); }
+    .btn--primary:hover { background: var(--teal-light); transform: translateY(-2px); box-shadow: 0 8px 30px rgba(14,165,160,0.35); }
+    .btn--outline { background: transparent; color: var(--white); border: 2px solid rgba(255,255,255,0.4); }
+    .btn--outline:hover { border-color: var(--white); background: rgba(255,255,255,0.1); transform: translateY(-2px); }
+    .btn--gold { background: var(--gold); color: var(--navy-deep); }
+    .btn--gold:hover { background: var(--gold-light); transform: translateY(-2px); box-shadow: 0 8px 30px rgba(212,168,83,0.35); }
+    .btn--dark { background: var(--navy); color: var(--white); }
+    .btn--dark:hover { background: var(--navy-mid); transform: translateY(-2px); }
+
+    /* Scroll reveal */
+    .reveal { opacity: 0; transform: translateY(40px); transition: opacity 0.8s var(--ease-out), transform 0.8s var(--ease-out); }
+    .reveal.visible { opacity: 1; transform: translateY(0); }
+    .reveal-delay-1 { transition-delay: 0.1s; }
+    .reveal-delay-2 { transition-delay: 0.2s; }
+    .reveal-delay-3 { transition-delay: 0.3s; }
+    .reveal-delay-4 { transition-delay: 0.4s; }
+    .reveal-delay-5 { transition-delay: 0.5s; }
+    .reveal-delay-6 { transition-delay: 0.6s; }
+
+    /* ========================================
+       HEADER / NAVIGATION
+       ======================================== */
+    .header {
+      position: fixed; top: 0; left: 0; width: 100%; z-index: 1000;
+      padding: 1.2rem 0; transition: background 0.4s ease, padding 0.4s ease, box-shadow 0.4s ease;
+    }
+    .header.scrolled {
+      background: rgba(6,16,31,0.95); backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px); padding: 0.7rem 0; box-shadow: 0 4px 30px rgba(0,0,0,0.3);
+    }
+    .header__inner { display: flex; align-items: center; justify-content: space-between; }
+    .header__logo { display: flex; align-items: center; gap: 0.75rem; z-index: 1001; }
+    .header__logo-icon {
+      width: 44px; height: 44px; border-radius: 8px; overflow: hidden;
+      display: flex; align-items: center; justify-content: center;
+    }
+    .header__logo-icon img { width: 100%; height: 100%; object-fit: contain; }
+    .header__logo-text { font-family: var(--font-display); font-size: 1.3rem; font-weight: 700; color: var(--white); letter-spacing: 0.02em; }
+    .header__logo-text span {
+      display: block; font-family: var(--font-body); font-size: 0.6rem; font-weight: 500;
+      letter-spacing: 0.2em; text-transform: uppercase; opacity: 0.7; margin-top: -2px;
+    }
+    .nav { display: flex; align-items: center; gap: 2rem; }
+    .nav__link {
+      font-size: 0.85rem; font-weight: 500; color: rgba(255,255,255,0.8);
+      letter-spacing: 0.03em; transition: color 0.3s ease; position: relative;
+    }
+    .nav__link::after {
+      content: ''; position: absolute; bottom: -4px; left: 0; width: 0; height: 2px;
+      background: var(--teal); transition: width 0.3s var(--ease-out);
+    }
+    .nav__link:hover { color: var(--white); }
+    .nav__link:hover::after { width: 100%; }
+    .nav__cta { font-size: 0.8rem; padding: 0.6rem 1.5rem; }
+    .nav__lang {
+      font-size: 0.75rem; font-weight: 600; color: rgba(255,255,255,0.6); cursor: pointer;
+      border: 1px solid rgba(255,255,255,0.2); padding: 0.3rem 0.6rem; border-radius: 4px; transition: var(--transition);
+    }
+    .nav__lang:hover { color: var(--white); border-color: rgba(255,255,255,0.5); }
+
+    .hamburger {
+      display: none; flex-direction: column; gap: 5px; cursor: pointer; z-index: 1001;
+      background: none; border: none; padding: 4px;
+    }
+    .hamburger span { display: block; width: 26px; height: 2px; background: var(--white); border-radius: 2px; transition: var(--transition); }
+    .hamburger.active span:nth-child(1) { transform: rotate(45deg) translate(5px, 5px); }
+    .hamburger.active span:nth-child(2) { opacity: 0; }
+    .hamburger.active span:nth-child(3) { transform: rotate(-45deg) translate(5px, -5px); }
+
+    .mobile-menu {
+      position: fixed; top: 0; left: 0; width: 100%; height: 100vh;
+      background: var(--navy-deep); z-index: 999; flex-direction: column;
+      align-items: center; justify-content: center; gap: 2rem;
+      display: flex; opacity: 0; visibility: hidden; transition: opacity 0.4s ease, visibility 0.4s ease;
+    }
+    .mobile-menu.open { opacity: 1; visibility: visible; }
+    .mobile-menu a { font-family: var(--font-display); font-size: 1.8rem; color: var(--white); font-weight: 600; transition: color 0.3s ease; }
+    .mobile-menu a:hover { color: var(--teal); }
+
+    @media (max-width: 968px) {
+      .nav { display: none; }
+      .hamburger { display: flex; }
+    }
+
+    /* ========================================
+       HERO
+       ======================================== */
+    .hero {
+      position: relative; min-height: 100vh; display: flex; align-items: flex-end;
+      padding-bottom: clamp(4rem, 10vw, 7rem); overflow: hidden;
+    }
+    .hero__bg { position: absolute; inset: 0; z-index: 0; }
+    .hero__bg video, .hero__bg img { width: 100%; height: 100%; object-fit: cover; object-position: center 30%; }
+    .hero__bg::after {
+      content: ''; position: absolute; inset: 0;
+      background: linear-gradient(180deg, rgba(6,16,31,0.4) 0%, rgba(6,16,31,0.15) 40%, rgba(6,16,31,0.65) 70%, rgba(6,16,31,0.93) 100%);
+    }
+    .hero__content { position: relative; z-index: 1; }
+    .hero__badge {
+      display: inline-flex; align-items: center; gap: 0.5rem;
+      background: rgba(14,165,160,0.15); border: 1px solid rgba(14,165,160,0.3);
+      backdrop-filter: blur(10px); padding: 0.5rem 1.2rem; border-radius: 60px;
+      font-size: 0.75rem; font-weight: 600; letter-spacing: 0.15em;
+      text-transform: uppercase; color: var(--teal-light); margin-bottom: 1.5rem;
+      animation: fadeInUp 0.8s var(--ease-out) 0.2s both;
+    }
+    .hero__badge::before {
+      content: ''; width: 8px; height: 8px; background: var(--teal); border-radius: 50%;
+      animation: pulse 2s ease infinite;
+    }
+    @keyframes pulse { 0%, 100% { opacity: 1; } 50% { opacity: 0.4; } }
+    .hero__title {
+      font-family: var(--font-display); font-size: clamp(2.8rem, 7vw, 5.5rem);
+      font-weight: 700; color: var(--white); line-height: 1.05; margin-bottom: 0.25rem;
+      animation: fadeInUp 0.8s var(--ease-out) 0.4s both;
+    }
+    .hero__title-accent {
+      display: block;
+      background: linear-gradient(135deg, var(--teal-light), var(--gold));
+      -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
+    }
+    .hero__subtitle {
+      font-size: clamp(1rem, 1.8vw, 1.25rem); color: rgba(255,255,255,0.75);
+      max-width: 540px; line-height: 1.7; margin-bottom: 2.5rem;
+      animation: fadeInUp 0.8s var(--ease-out) 0.6s both;
+    }
+    .hero__actions { display: flex; flex-wrap: wrap; gap: 1rem; animation: fadeInUp 0.8s var(--ease-out) 0.8s both; }
+    .hero__scroll-indicator {
+      position: absolute; bottom: 2rem; left: 50%; transform: translateX(-50%); z-index: 1;
+      display: flex; flex-direction: column; align-items: center; gap: 0.5rem;
+      color: rgba(255,255,255,0.4); font-size: 0.65rem; letter-spacing: 0.2em; text-transform: uppercase;
+      animation: fadeInUp 0.8s var(--ease-out) 1.2s both;
+    }
+    .hero__scroll-line {
+      width: 1px; height: 40px; background: linear-gradient(to bottom, rgba(255,255,255,0.4), transparent);
+      animation: scrollLine 2s ease infinite;
+    }
+    @keyframes scrollLine {
+      0% { transform: scaleY(0); transform-origin: top; }
+      50% { transform: scaleY(1); transform-origin: top; }
+      51% { transform: scaleY(1); transform-origin: bottom; }
+      100% { transform: scaleY(0); transform-origin: bottom; }
+    }
+    @keyframes fadeInUp { from { opacity: 0; transform: translateY(30px); } to { opacity: 1; transform: translateY(0); } }
+    .hero__stats {
+      display: flex; gap: 3rem; margin-top: 3rem; padding-top: 2rem;
+      border-top: 1px solid rgba(255,255,255,0.1); animation: fadeInUp 0.8s var(--ease-out) 1s both;
+    }
+    .hero__stat-number { font-family: var(--font-display); font-size: 2.2rem; font-weight: 700; color: var(--teal-light); line-height: 1; }
+    .hero__stat-label { font-size: 0.75rem; color: rgba(255,255,255,0.5); letter-spacing: 0.08em; margin-top: 0.25rem; }
+    @media (max-width: 640px) {
+      .hero__stats { gap: 1.5rem; flex-wrap: wrap; }
+      .hero__stat-number { font-size: 1.6rem; }
+    }
+
+    /* ========================================
+       ABOUT
+       ======================================== */
+    .about { padding: var(--section-pad) 0; background: var(--white); }
+    .about__grid { display: grid; grid-template-columns: 1fr 1fr; gap: clamp(2rem, 5vw, 5rem); align-items: center; }
+    .about__image-wrap { position: relative; }
+    .about__image { border-radius: 16px; overflow: hidden; box-shadow: 0 25px 60px rgba(11,29,58,0.15); }
+    .about__image img { width: 100%; height: 450px; object-fit: cover; transition: transform 0.6s var(--ease-out); }
+    .about__image:hover img { transform: scale(1.03); }
+    .about__image-accent {
+      position: absolute; top: -20px; right: -20px; width: 120px; height: 120px;
+      border: 3px solid var(--teal); border-radius: 16px; opacity: 0.3; z-index: -1;
+    }
+    .about__values { display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; margin-top: 2rem; }
+    .about__value { display: flex; align-items: flex-start; gap: 0.75rem; }
+    .about__value-icon {
+      width: 40px; height: 40px; min-width: 40px; background: var(--teal-glow);
+      border-radius: 10px; display: flex; align-items: center; justify-content: center; font-size: 1.1rem;
+    }
+    .about__value-title { font-weight: 600; font-size: 0.9rem; margin-bottom: 0.15rem; }
+    .about__value-text { font-size: 0.8rem; color: var(--gray-600); line-height: 1.5; }
+    @media (max-width: 768px) {
+      .about__grid { grid-template-columns: 1fr; }
+      .about__image img { height: 300px; }
+      .about__image-accent { display: none; }
+      .about__values { grid-template-columns: 1fr; }
+    }
+
+    /* ========================================
+       SPORTS
+       ======================================== */
+    .sports { padding: var(--section-pad) 0; background: var(--off-white); position: relative; overflow: hidden; }
+    .sports::before {
+      content: ''; position: absolute; top: -200px; right: -200px; width: 500px; height: 500px;
+      background: radial-gradient(circle, var(--teal-glow), transparent 70%); pointer-events: none;
+    }
+    .sports__header { text-align: center; margin-bottom: 3rem; }
+    .sports__header .section-subtitle { margin: 0 auto; }
+    .sports__grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: var(--gap); }
+    .sport-card {
+      background: var(--white); border-radius: 16px; overflow: hidden;
+      transition: var(--transition); cursor: pointer; position: relative;
+      box-shadow: 0 4px 20px rgba(11,29,58,0.06);
+    }
+    .sport-card:hover { transform: translateY(-8px); box-shadow: 0 20px 50px rgba(11,29,58,0.12); }
+    .sport-card__image { height: 200px; overflow: hidden; position: relative; }
+    .sport-card__image img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.6s var(--ease-out); }
+    .sport-card:hover .sport-card__image img { transform: scale(1.08); }
+    .sport-card__image-overlay { position: absolute; inset: 0; background: linear-gradient(180deg, transparent 50%, rgba(6,16,31,0.7) 100%); }
+    .sport-card__icon {
+      position: absolute; top: 1rem; left: 1rem; width: 48px; height: 48px;
+      background: rgba(255,255,255,0.95); backdrop-filter: blur(8px); border-radius: 12px;
+      display: flex; align-items: center; justify-content: center; font-size: 1.4rem;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    }
+    .sport-card__body { padding: 1.5rem; }
+    .sport-card__name { font-family: var(--font-display); font-size: 1.4rem; font-weight: 700; margin-bottom: 0.5rem; }
+    .sport-card__desc { font-size: 0.85rem; color: var(--gray-600); line-height: 1.6; margin-bottom: 1rem; }
+    .sport-card__link {
+      display: inline-flex; align-items: center; gap: 0.4rem; font-size: 0.8rem;
+      font-weight: 600; color: var(--teal); letter-spacing: 0.03em; transition: gap 0.3s var(--ease-out);
+    }
+    .sport-card:hover .sport-card__link { gap: 0.7rem; }
+    .sport-card__link::after { content: '\2192'; }
+    @media (max-width: 968px) { .sports__grid { grid-template-columns: repeat(2, 1fr); } }
+    @media (max-width: 580px) { .sports__grid { grid-template-columns: 1fr; } }
+
+    /* ========================================
+       ACADEMY (Youth)
+       ======================================== */
+    .academy {
+      padding: var(--section-pad) 0; background: var(--navy-deep); color: var(--white);
+      position: relative; overflow: hidden;
+    }
+    .academy::before {
+      content: ''; position: absolute; bottom: -100px; left: -100px; width: 400px; height: 400px;
+      background: radial-gradient(circle, rgba(14,165,160,0.08), transparent 70%); pointer-events: none;
+    }
+    .academy__grid { display: grid; grid-template-columns: 1fr 1fr; gap: clamp(2rem, 5vw, 5rem); align-items: center; }
+    .academy__content { order: 1; }
+    .academy__visual { order: 2; position: relative; }
+    .academy__pathway {
+      display: flex; flex-direction: column; gap: 1.5rem; margin-top: 2rem;
+    }
+    .academy__step {
+      display: flex; align-items: flex-start; gap: 1.2rem; padding: 1.2rem 1.5rem;
+      background: rgba(255,255,255,0.04); border-radius: 12px; border-left: 3px solid var(--teal);
+      transition: var(--transition);
+    }
+    .academy__step:hover { background: rgba(255,255,255,0.08); }
+    .academy__step-num {
+      width: 36px; height: 36px; min-width: 36px; background: var(--teal); border-radius: 50%;
+      display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 0.85rem;
+    }
+    .academy__step-title { font-weight: 600; font-size: 0.95rem; margin-bottom: 0.2rem; }
+    .academy__step-text { font-size: 0.8rem; color: var(--gray-400); line-height: 1.5; }
+    .academy__image {
+      border-radius: 16px; overflow: hidden; box-shadow: 0 25px 60px rgba(0,0,0,0.3);
+    }
+    .academy__image img { width: 100%; height: 500px; object-fit: cover; }
+    .academy__cta { margin-top: 2rem; }
+
+    /* Animated wave mascot */
+    .wave-mascot {
+      position: absolute; bottom: -10px; right: 30px; font-size: 4rem;
+      animation: bob 3s ease-in-out infinite;
+    }
+    @keyframes bob {
+      0%, 100% { transform: translateY(0) rotate(-5deg); }
+      50% { transform: translateY(-15px) rotate(5deg); }
+    }
+
+    /* Fun badges for academy steps */
+    .academy__step-badge {
+      display: inline-block; padding: 0.2rem 0.6rem; border-radius: 60px;
+      font-size: 0.6rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase;
+      margin-top: 0.3rem;
+    }
+    .badge--beginner { background: rgba(45,212,191,0.2); color: var(--teal-light); }
+    .badge--intermediate { background: rgba(212,168,83,0.2); color: var(--gold-light); }
+    .badge--advanced { background: rgba(255,107,107,0.2); color: var(--coral); }
+
+    /* Fun sport quiz CTA */
+    .sport-quiz {
+      background: linear-gradient(135deg, var(--teal), var(--navy-light));
+      border-radius: 16px; padding: 2rem; text-align: center; margin-top: 2rem;
+      color: var(--white); position: relative; overflow: hidden;
+    }
+    .sport-quiz::before {
+      content: ''; position: absolute; top: -50%; right: -30%; width: 300px; height: 300px;
+      background: radial-gradient(circle, rgba(255,255,255,0.08), transparent 70%);
+      pointer-events: none;
+    }
+    .sport-quiz__title { font-family: var(--font-display); font-size: 1.5rem; font-weight: 700; margin-bottom: 0.5rem; }
+    .sport-quiz__text { font-size: 0.9rem; opacity: 0.85; margin-bottom: 1.2rem; }
+    .sport-quiz__options { display: flex; flex-wrap: wrap; justify-content: center; gap: 0.5rem; margin-bottom: 1rem; }
+    .sport-quiz__option {
+      background: rgba(255,255,255,0.12); border: 1px solid rgba(255,255,255,0.2);
+      padding: 0.5rem 1rem; border-radius: 60px; font-size: 0.8rem; cursor: pointer;
+      transition: var(--transition); font-weight: 500; color: inherit; font-family: inherit;
+    }
+    .sport-quiz__option:hover, .sport-quiz__option.active {
+      background: var(--white); color: var(--navy); border-color: var(--white);
+    }
+    .sport-quiz__result {
+      font-family: var(--font-display); font-size: 1.3rem; font-weight: 700;
+      min-height: 2rem; transition: opacity 0.3s ease;
+    }
+    @media (max-width: 768px) {
+      .academy__grid { grid-template-columns: 1fr; }
+      .academy__content { order: 2; }
+      .academy__visual { order: 1; }
+      .academy__image img { height: 300px; }
+    }
+
+    /* ========================================
+       SUMMER CAMP
+       ======================================== */
+    .camp {
+      position: relative; padding: clamp(5rem, 10vw, 8rem) 0; overflow: hidden;
+    }
+    .camp__bg {
+      position: absolute; inset: 0; z-index: 0;
+    }
+    .camp__bg img { width: 100%; height: 100%; object-fit: cover; }
+    .camp__bg::after {
+      content: ''; position: absolute; inset: 0;
+      background: linear-gradient(135deg, rgba(6,16,31,0.88) 0%, rgba(14,165,160,0.6) 100%);
+    }
+    .camp__content { position: relative; z-index: 1; text-align: center; max-width: 700px; margin: 0 auto; }
+    .camp__icon { font-size: 3rem; margin-bottom: 1rem; }
+    .camp__title {
+      font-family: var(--font-display); font-size: clamp(2rem, 5vw, 3.5rem);
+      font-weight: 700; color: var(--white); line-height: 1.1; margin-bottom: 1rem;
+    }
+    .camp__text { font-size: 1.1rem; color: rgba(255,255,255,0.8); line-height: 1.8; margin-bottom: 2rem; }
+    .camp__features {
+      display: flex; flex-wrap: wrap; justify-content: center; gap: 1rem; margin-bottom: 2.5rem;
+    }
+    .camp__feature {
+      display: inline-flex; align-items: center; gap: 0.5rem;
+      background: rgba(255,255,255,0.1); border: 1px solid rgba(255,255,255,0.15);
+      backdrop-filter: blur(8px); padding: 0.5rem 1rem; border-radius: 60px;
+      font-size: 0.8rem; color: var(--white); font-weight: 500;
+    }
+
+    /* ========================================
+       EVENTS
+       ======================================== */
+    .events { padding: var(--section-pad) 0; background: var(--white); }
+    .events__header { text-align: center; margin-bottom: 3rem; }
+    .events__header .section-subtitle { margin: 0 auto; }
+    .events__grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: var(--gap); }
+    .event-card {
+      border: 1px solid var(--gray-100); border-radius: 16px; overflow: hidden;
+      transition: var(--transition);
+    }
+    .event-card:hover { transform: translateY(-4px); box-shadow: 0 12px 40px rgba(11,29,58,0.08); }
+    .event-card__date {
+      padding: 1.5rem 1.5rem 0; display: flex; align-items: flex-start; gap: 1rem;
+    }
+    .event-card__date-box {
+      background: var(--teal); color: var(--white); border-radius: 12px;
+      padding: 0.6rem 0.8rem; text-align: center; min-width: 58px;
+    }
+    .event-card__date-day { font-family: var(--font-display); font-size: 1.6rem; font-weight: 700; line-height: 1; }
+    .event-card__date-month { font-size: 0.65rem; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; }
+    .event-card__date-info { flex: 1; }
+    .event-card__category {
+      display: inline-block; font-size: 0.65rem; font-weight: 600; letter-spacing: 0.15em;
+      text-transform: uppercase; color: var(--teal); margin-bottom: 0.3rem;
+    }
+    .event-card__title { font-family: var(--font-display); font-size: 1.2rem; font-weight: 700; }
+    .event-card__body { padding: 1rem 1.5rem 1.5rem; }
+    .event-card__desc { font-size: 0.85rem; color: var(--gray-600); line-height: 1.6; }
+    .event-card__tag {
+      display: inline-block; margin-top: 0.75rem; padding: 0.3rem 0.8rem; border-radius: 60px;
+      font-size: 0.7rem; font-weight: 600; letter-spacing: 0.05em;
+    }
+    .event-card__tag--sailing { background: #E0F7FA; color: #00796B; }
+    .event-card__tag--windsurf { background: #FFF3E0; color: #E65100; }
+    .event-card__tag--general { background: #EDE7F6; color: #4527A0; }
+    @media (max-width: 768px) { .events__grid { grid-template-columns: 1fr; } }
+
+    /* ========================================
+       NEWS
+       ======================================== */
+    .news { padding: var(--section-pad) 0; background: var(--off-white); }
+    .news__header { display: flex; justify-content: space-between; align-items: flex-end; margin-bottom: 3rem; flex-wrap: wrap; gap: 1rem; }
+    .news__grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: var(--gap); }
+    .news-card {
+      background: var(--white); border-radius: 16px; overflow: hidden;
+      transition: var(--transition); box-shadow: 0 4px 20px rgba(11,29,58,0.06);
+    }
+    .news-card:hover { transform: translateY(-6px); box-shadow: 0 16px 40px rgba(11,29,58,0.1); }
+    .news-card__image { height: 200px; overflow: hidden; }
+    .news-card__image img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.6s var(--ease-out); }
+    .news-card:hover .news-card__image img { transform: scale(1.05); }
+    .news-card__body { padding: 1.5rem; }
+    .news-card__date { font-size: 0.7rem; color: var(--gray-400); font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; margin-bottom: 0.5rem; }
+    .news-card__title { font-family: var(--font-display); font-size: 1.2rem; font-weight: 700; margin-bottom: 0.5rem; line-height: 1.3; }
+    .news-card__excerpt { font-size: 0.85rem; color: var(--gray-600); line-height: 1.6; }
+    @media (max-width: 768px) { .news__grid { grid-template-columns: 1fr; } }
+
+    /* ========================================
+       GALLERY
+       ======================================== */
+    .gallery { padding: var(--section-pad) 0; background: var(--white); }
+    .gallery__header { text-align: center; margin-bottom: 3rem; }
+    .gallery__header .section-subtitle { margin: 0 auto; }
+    .gallery__grid {
+      display: grid; grid-template-columns: repeat(4, 1fr); grid-auto-rows: 220px; gap: 0.5rem;
+    }
+    .gallery__item {
+      border-radius: 12px; overflow: hidden; cursor: pointer; position: relative;
+    }
+    .gallery__item img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s var(--ease-out); }
+    .gallery__item::after {
+      content: ''; position: absolute; inset: 0; background: rgba(6,16,31,0); transition: background 0.3s ease;
+    }
+    .gallery__item:hover img { transform: scale(1.08); }
+    .gallery__item:hover::after { background: rgba(6,16,31,0.2); }
+    .gallery__item--wide { grid-column: span 2; }
+    .gallery__item--tall { grid-row: span 2; }
+    @media (max-width: 768px) {
+      .gallery__grid { grid-template-columns: repeat(2, 1fr); grid-auto-rows: 180px; }
+      .gallery__item--wide { grid-column: span 1; }
+      .gallery__item--tall { grid-row: span 1; }
+    }
+
+    /* Social feeds */
+    .social-feeds__grid { display: grid; grid-template-columns: 1fr; gap: var(--gap); max-width: 500px; margin: 0 auto; }
+    .social-feeds__title {
+      font-family: var(--font-display); font-size: 1.3rem; font-weight: 700;
+      margin-bottom: 1rem; display: flex; align-items: center;
+    }
+    .social-feeds__embed { border-radius: 12px; overflow: hidden; }
+    .social-feeds__ig-link { display: block; text-decoration: none; color: inherit; }
+    .social-feeds__ig-card {
+      background: var(--white); border: 1px solid var(--gray-100); border-radius: 12px;
+      overflow: hidden; transition: var(--transition);
+    }
+    .social-feeds__ig-card:hover { box-shadow: 0 12px 40px rgba(11,29,58,0.1); transform: translateY(-2px); }
+    .social-feeds__ig-header {
+      display: flex; align-items: center; gap: 0.75rem; padding: 1rem 1.2rem;
+      border-bottom: 1px solid var(--gray-100);
+    }
+    .social-feeds__ig-avatar {
+      width: 40px; height: 40px; border-radius: 50%;
+      background: linear-gradient(135deg, #833AB4, #FD1D1D, #F77737);
+      display: flex; align-items: center; justify-content: center;
+      color: white; font-weight: 700; font-size: 0.7rem;
+    }
+    .social-feeds__ig-grid {
+      display: grid; grid-template-columns: repeat(3, 1fr); gap: 2px; padding: 2px;
+    }
+    .social-feeds__ig-grid img {
+      width: 100%; aspect-ratio: 1; object-fit: cover;
+      transition: opacity 0.3s ease;
+    }
+    .social-feeds__ig-grid img:hover { opacity: 0.85; }
+    .social-feeds__ig-cta {
+      text-align: center; padding: 1rem; font-size: 0.85rem; font-weight: 600;
+      color: var(--teal); border-top: 1px solid var(--gray-100);
+    }
+    @media (max-width: 768px) { .social-feeds__grid { max-width: 100%; } }
+
+    /* Lightbox */
+    .lightbox {
+      display: none; position: fixed; inset: 0; background: rgba(6,16,31,0.95);
+      z-index: 2000; align-items: center; justify-content: center; cursor: pointer;
+    }
+    .lightbox.active { display: flex; }
+    .lightbox img {
+      max-width: 90vw; max-height: 85vh; border-radius: 8px; box-shadow: 0 30px 80px rgba(0,0,0,0.5);
+    }
+    .lightbox__close {
+      position: absolute; top: 2rem; right: 2rem; width: 48px; height: 48px;
+      background: rgba(255,255,255,0.1); border: none; border-radius: 50%;
+      color: var(--white); font-size: 1.5rem; cursor: pointer; transition: var(--transition);
+      display: flex; align-items: center; justify-content: center;
+    }
+    .lightbox__close:hover { background: rgba(255,255,255,0.2); }
+
+    /* ========================================
+       MEMBERSHIP
+       ======================================== */
+    .membership {
+      padding: var(--section-pad) 0;
+      background: linear-gradient(135deg, var(--navy-deep) 0%, var(--navy-mid) 100%);
+      color: var(--white); position: relative; overflow: hidden;
+    }
+    .membership::before {
+      content: ''; position: absolute; top: -50%; right: -20%; width: 600px; height: 600px;
+      background: radial-gradient(circle, rgba(212,168,83,0.08), transparent 70%); pointer-events: none;
+    }
+    .membership__header { text-align: center; margin-bottom: 3rem; }
+    .membership__header .section-subtitle--light { margin: 0 auto; }
+    .membership__grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: var(--gap); max-width: 1000px; margin: 0 auto; }
+    .membership-card {
+      background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.08);
+      border-radius: 16px; padding: 2rem; text-align: center; transition: var(--transition);
+      position: relative;
+    }
+    .membership-card:hover { background: rgba(255,255,255,0.08); transform: translateY(-4px); }
+    .membership-card--featured { border-color: var(--gold); }
+    .membership-card--featured::before {
+      content: ''; display: none;
+    }
+    .membership-card__badge {
+      position: absolute; top: -12px; left: 50%; transform: translateX(-50%);
+      background: var(--gold); color: var(--navy-deep); font-size: 0.65rem; font-weight: 700;
+      letter-spacing: 0.1em; text-transform: uppercase; padding: 0.3rem 1rem; border-radius: 60px;
+      white-space: nowrap;
+    }
+    .membership-card__icon { font-size: 2rem; margin-bottom: 1rem; }
+    .membership-card__title { font-family: var(--font-display); font-size: 1.5rem; font-weight: 700; margin-bottom: 0.5rem; }
+    .membership-card__desc { font-size: 0.85rem; color: var(--gray-400); line-height: 1.6; margin-bottom: 1.5rem; }
+    .membership-card__features { list-style: none; margin-bottom: 2rem; text-align: left; }
+    .membership-card__features li {
+      font-size: 0.85rem; padding: 0.4rem 0; border-bottom: 1px solid rgba(255,255,255,0.06);
+      display: flex; align-items: center; gap: 0.5rem;
+    }
+    .membership-card__features li::before { content: '\2713'; color: var(--teal-light); font-weight: 700; }
+    @media (max-width: 768px) { .membership__grid { grid-template-columns: 1fr; max-width: 400px; } }
+
+    /* ========================================
+       WEATHER & SPONSORS
+       ======================================== */
+    .weather-sponsors { padding: var(--section-pad) 0; background: var(--off-white); }
+    .weather-sponsors__grid { display: grid; grid-template-columns: 1fr 1fr; gap: clamp(2rem, 5vw, 4rem); align-items: start; }
+    .weather-widget {
+      background: var(--white); border-radius: 16px; padding: 2rem;
+      box-shadow: 0 4px 20px rgba(11,29,58,0.06);
+    }
+    .weather-widget__header { display: flex; align-items: center; gap: 0.75rem; margin-bottom: 1.5rem; }
+    .weather-widget__icon { font-size: 2rem; }
+    .weather-widget__title { font-family: var(--font-display); font-size: 1.3rem; font-weight: 700; }
+    .weather-widget__location { font-size: 0.75rem; color: var(--gray-400); }
+    .weather-widget__data { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; text-align: center; }
+    .weather-widget__item-value {
+      font-family: var(--font-display); font-size: 1.8rem; font-weight: 700; color: var(--teal); line-height: 1;
+    }
+    .weather-widget__item-label { font-size: 0.7rem; color: var(--gray-400); margin-top: 0.25rem; letter-spacing: 0.08em; text-transform: uppercase; }
+    .weather-widget__note { margin-top: 1.5rem; font-size: 0.75rem; color: var(--gray-400); text-align: center; font-style: italic; }
+    .sponsors__title { font-family: var(--font-display); font-size: 1.3rem; font-weight: 700; margin-bottom: 1.5rem; }
+    .sponsors__grid {
+      display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem;
+    }
+    .sponsors__item {
+      background: var(--white); border-radius: 12px; height: 80px;
+      display: flex; align-items: center; justify-content: center;
+      border: 1px solid var(--gray-100); font-size: 0.8rem; color: var(--gray-400);
+      font-weight: 600; letter-spacing: 0.05em; transition: var(--transition);
+    }
+    .sponsors__item:hover { border-color: var(--teal); color: var(--teal); }
+    @media (max-width: 768px) {
+      .weather-sponsors__grid { grid-template-columns: 1fr; }
+      .sponsors__grid { grid-template-columns: repeat(2, 1fr); }
+    }
+
+    /* ========================================
+       FOOTER
+       ======================================== */
+    .footer { background: var(--navy-deep); color: var(--white); padding: clamp(3rem, 6vw, 5rem) 0 0; }
+    .footer__grid {
+      display: grid; grid-template-columns: 2fr 1fr 1fr 1.5fr; gap: clamp(2rem, 4vw, 4rem);
+      padding-bottom: 3rem; border-bottom: 1px solid rgba(255,255,255,0.08);
+    }
+    .footer__brand-name { font-family: var(--font-display); font-size: 1.5rem; font-weight: 700; margin-bottom: 0.75rem; }
+    .footer__brand-desc { font-size: 0.85rem; color: var(--gray-400); line-height: 1.7; margin-bottom: 1.5rem; }
+    .footer__social { display: flex; gap: 0.75rem; }
+    .footer__social a {
+      width: 40px; height: 40px; border-radius: 50%; border: 1px solid rgba(255,255,255,0.15);
+      display: flex; align-items: center; justify-content: center; font-size: 0.85rem;
+      transition: var(--transition);
+    }
+    .footer__social a:hover { background: var(--teal); border-color: var(--teal); }
+    .footer__heading { font-weight: 700; font-size: 0.85rem; letter-spacing: 0.1em; text-transform: uppercase; margin-bottom: 1.2rem; }
+    .footer__links { list-style: none; }
+    .footer__links li { margin-bottom: 0.6rem; }
+    .footer__links a { font-size: 0.85rem; color: var(--gray-400); transition: color 0.3s ease; }
+    .footer__links a:hover { color: var(--teal-light); }
+    .footer__contact-item { display: flex; align-items: flex-start; gap: 0.75rem; margin-bottom: 1rem; }
+    .footer__contact-icon { font-size: 1rem; color: var(--teal); margin-top: 2px; }
+    .footer__contact-text { font-size: 0.85rem; color: var(--gray-400); line-height: 1.5; }
+    .footer__contact-text a { color: var(--gray-400); transition: color 0.3s ease; }
+    .footer__contact-text a:hover { color: var(--teal-light); }
+    .footer__newsletter { margin-top: 1.5rem; }
+    .footer__newsletter-form { display: flex; gap: 0.5rem; }
+    .footer__newsletter-input {
+      flex: 1; padding: 0.7rem 1rem; border: 1px solid rgba(255,255,255,0.15);
+      background: rgba(255,255,255,0.04); border-radius: 8px; color: var(--white);
+      font-family: var(--font-body); font-size: 0.85rem;
+    }
+    .footer__newsletter-input::placeholder { color: var(--gray-400); }
+    .footer__newsletter-btn {
+      padding: 0.7rem 1.2rem; background: var(--teal); color: var(--white); border: none;
+      border-radius: 8px; font-weight: 600; font-size: 0.8rem; cursor: pointer; transition: var(--transition);
+    }
+    .footer__newsletter-btn:hover { background: var(--teal-light); }
+    .footer__bottom {
+      display: flex; justify-content: space-between; align-items: center;
+      padding: 1.5rem 0; flex-wrap: wrap; gap: 0.5rem;
+    }
+    .footer__copy { font-size: 0.75rem; color: var(--gray-400); }
+    .footer__registry { font-size: 0.7rem; color: var(--gray-400); opacity: 0.6; }
+
+    /* Floating CTA button */
+    .floating-cta {
+      position: fixed; bottom: 1.5rem; right: 1.5rem; z-index: 1500;
+      display: flex; flex-direction: column; gap: 0.75rem; align-items: flex-end;
+    }
+    .floating-cta__btn {
+      width: 56px; height: 56px; border-radius: 50%; display: flex;
+      align-items: center; justify-content: center; border: none; cursor: pointer;
+      transition: var(--transition); box-shadow: 0 6px 25px rgba(0,0,0,0.2);
+    }
+    .floating-cta__btn:hover { transform: scale(1.1); }
+    .floating-cta__btn--phone { background: var(--teal); color: var(--white); font-size: 1.3rem; }
+    .floating-cta__btn--email { background: var(--gold); color: var(--navy-deep); font-size: 1.3rem; }
+    .floating-cta__btn--top { background: var(--navy); color: var(--white); font-size: 1.1rem; opacity: 0; pointer-events: none; transition: opacity 0.3s ease, transform 0.3s ease; }
+    .floating-cta__btn--top.visible { opacity: 1; pointer-events: auto; }
+    .floating-cta__tooltip {
+      position: absolute; right: 64px; top: 50%; transform: translateY(-50%);
+      background: var(--navy); color: var(--white); font-size: 0.75rem; font-weight: 600;
+      padding: 0.4rem 0.8rem; border-radius: 6px; white-space: nowrap;
+      opacity: 0; transition: opacity 0.3s ease; pointer-events: none;
+    }
+    .floating-cta__btn:hover + .floating-cta__tooltip,
+    .floating-cta__btn:hover .floating-cta__tooltip { opacity: 1; }
+
+    /* Google Maps embed */
+    .footer__map {
+      grid-column: 1 / -1; margin-top: 1.5rem; border-radius: 12px; overflow: hidden;
+      height: 250px; border: 1px solid rgba(255,255,255,0.08);
+    }
+    .footer__map iframe { width: 100%; height: 100%; border: none; filter: saturate(0.8) contrast(1.1); }
+    @media (max-width: 968px) {
+      .footer__grid { grid-template-columns: 1fr 1fr; }
+    }
+    @media (max-width: 580px) {
+      .footer__grid { grid-template-columns: 1fr; }
+      .footer__bottom { flex-direction: column; text-align: center; }
+    }
+    /* Cookie consent */
+    .cookie-consent {
+      position: fixed; bottom: 0; left: 0; right: 0; z-index: 10000;
+      background: var(--navy); color: var(--white); padding: 1rem 1.5rem;
+      display: flex; align-items: center; justify-content: center; gap: 1.5rem;
+      font-size: 0.85rem; box-shadow: 0 -2px 10px rgba(0,0,0,0.3);
+    }
+    .cookie-consent p { margin: 0; max-width: 600px; line-height: 1.5; }
+    .cookie-consent a { color: var(--teal-light); text-decoration: underline; }
+    .cookie-consent__btn {
+      background: var(--teal); color: var(--white); border: none; padding: 0.6rem 1.5rem;
+      border-radius: 6px; cursor: pointer; font-weight: 600; font-size: 0.85rem; white-space: nowrap;
+      font-family: inherit;
+    }
+    .cookie-consent__btn:hover { background: var(--teal-light); }
+    @media (max-width: 580px) {
+      .cookie-consent { flex-direction: column; text-align: center; gap: 0.8rem; }
+    }
+
+  </style>
+</head>
+<body>
+
+  <!-- ========== HEADER ========== -->
+  <header class="header" id="header">
+    <div class="container header__inner">
+      <a href="#" class="header__logo">
+        <div class="header__logo-icon"><img src="https://www.eio.gr/wp-content/uploads/2025/10/%CE%91%CE%9B%CE%99%CE%9C%CE%9F%CE%A5site.jpg" alt="NOA Logo"></div>
+        <div class="header__logo-text">
+          Ν.Ο.Α.
+          <span>Ναυτικός Όμιλος Αλίμου</span>
+        </div>
+      </a>
+      <nav class="nav">
+        <a href="#about" class="nav__link" data-i18n="nav_about">Ο Όμιλος</a>
+        <a href="#sports" class="nav__link" data-i18n="nav_sports">Αθλήματα</a>
+        <a href="#academy" class="nav__link" data-i18n="nav_academy">Ακαδημίες</a>
+        <a href="#events" class="nav__link" data-i18n="nav_events">Εκδηλώσεις</a>
+        <a href="#news" class="nav__link" data-i18n="nav_news">Νέα</a>
+        <a href="#gallery" class="nav__link" data-i18n="nav_gallery">Γκαλερί</a>
+        <a href="#contact" class="nav__link" data-i18n="nav_contact">Επικοινωνία</a>
+        <a href="#membership" class="btn btn--primary nav__cta" data-i18n="nav_cta">Εγγραφή</a>
+        <button class="nav__lang" id="langToggle" onclick="toggleLanguage()" aria-label="Switch language">EN</button>
+      </nav>
+      <button class="hamburger" id="hamburger" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- Mobile Menu -->
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="#about" onclick="closeMobile()" data-i18n="nav_about">Ο Όμιλος</a>
+    <a href="#sports" onclick="closeMobile()" data-i18n="nav_sports">Αθλήματα</a>
+    <a href="#academy" onclick="closeMobile()" data-i18n="nav_academy">Ακαδημίες</a>
+    <a href="#events" onclick="closeMobile()" data-i18n="nav_events">Εκδηλώσεις</a>
+    <a href="#news" onclick="closeMobile()" data-i18n="nav_news">Νέα</a>
+    <a href="#gallery" onclick="closeMobile()" data-i18n="nav_gallery">Γκαλερί</a>
+    <a href="#membership" onclick="closeMobile()" data-i18n="nav_cta">Εγγραφή</a>
+    <a href="#contact" onclick="closeMobile()" data-i18n="nav_contact">Επικοινωνία</a>
+    <button class="nav__lang" style="margin:0.5rem auto; display:inline-block;" onclick="toggleLanguage(); closeMobile();" aria-label="Switch language">EN</button>
+  </div>
+
+  <!-- ========== HERO ========== -->
+  <section class="hero" id="hero">
+    <div class="hero__bg">
+      <video autoplay muted loop playsinline poster="https://images.unsplash.com/photo-1717054373412-570fb5250052?w=1920&q=80" id="heroVideo">
+        <source src="https://assets.mixkit.co/videos/51441/51441-720.mp4" type="video/mp4" id="heroVideoSource">
+      </video>
+      <img src="https://images.unsplash.com/photo-1717054373412-570fb5250052?w=1920&q=80" alt="Ιστιοπλοΐα στον Σαρωνικό" class="hero__bg-fallback" style="display:none;">
+    </div>
+    <div class="container hero__content">
+      <div class="hero__badge" data-i18n="hero_badge">Παραλία Αλίμου — Αθήνα</div>
+      <h1 class="hero__title">
+        <span data-i18n="hero_title1">Ναυτικός Όμιλος</span>
+        <span class="hero__title-accent" data-i18n="hero_title_accent">Αλίμου</span>
+      </h1>
+      <p class="hero__subtitle" data-i18n="hero_subtitle">
+        Στην Παραλία Αλίμου, στα νερά του Σαρωνικού. Ιστιοπλοΐα, SUP, Windsurf,
+        Bic Techno 293 και Kayak — για κάθε ηλικία, για κάθε επίπεδο.
+      </p>
+      <div class="hero__actions">
+        <a href="#membership" class="btn btn--primary" data-i18n="hero_cta1">Γίνε Μέλος</a>
+        <a href="#sports" class="btn btn--outline" data-i18n="hero_cta2">Τα Αθλήματά μας</a>
+      </div>
+      <div class="hero__stats">
+        <div>
+          <div class="hero__stat-number">5</div>
+          <div class="hero__stat-label" data-i18n="hero_stat1">Αθλήματα</div>
+        </div>
+        <div>
+          <div class="hero__stat-number">#51</div>
+          <div class="hero__stat-label" data-i18n="hero_stat2">Αρ. Μητρώου</div>
+        </div>
+        <div>
+          <div class="hero__stat-number">Ε.Ι.Ο.</div>
+          <div class="hero__stat-label" data-i18n="hero_stat3">Μέλος Ομοσπονδίας</div>
+        </div>
+        <div>
+          <div class="hero__stat-number">ΝΑ01</div>
+          <div class="hero__stat-label" data-i18n="hero_stat4">Ε.Α.Α. / Γ.Γ.Α.</div>
+        </div>
+      </div>
+    </div>
+    <div class="hero__scroll-indicator">
+      <span>Scroll</span>
+      <div class="hero__scroll-line"></div>
+    </div>
+  </section>
+
+  <!-- Wave divider: hero → about -->
+  <div class="wave-divider">
+    <svg viewBox="0 0 1440 80" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+      <path fill="#FFFFFF" d="M0,40 C360,80 720,0 1080,40 C1260,60 1380,50 1440,40 L1440,80 L0,80 Z">
+        <animate attributeName="d" dur="6s" repeatCount="indefinite"
+          values="M0,40 C360,80 720,0 1080,40 C1260,60 1380,50 1440,40 L1440,80 L0,80 Z;
+                  M0,50 C360,10 720,70 1080,30 C1260,20 1380,60 1440,50 L1440,80 L0,80 Z;
+                  M0,40 C360,80 720,0 1080,40 C1260,60 1380,50 1440,40 L1440,80 L0,80 Z"/>
+      </path>
+    </svg>
+  </div>
+
+  <!-- ========== ABOUT ========== -->
+  <section class="about" id="about">
+    <div class="container">
+      <div class="about__grid">
+        <div class="about__image-wrap reveal">
+          <div class="about__image">
+            <img src="https://plus.unsplash.com/premium_photo-1664391609489-976974c26eeb?w=800&q=80" alt="Ιστιοπλοΐα στον Σαρωνικό">
+          </div>
+          <div class="about__image-accent"></div>
+        </div>
+        <div class="reveal reveal-delay-2">
+          <div class="section-label" data-i18n="about_label">Ο Όμιλός μας</div>
+          <h2 class="section-title" data-i18n-html="about_title">Στην καρδιά<br>της Αθηναϊκής Ριβιέρας</h2>
+          <p class="section-subtitle" data-i18n="about_desc">
+            Ο Ναυτικός Όμιλος Αλίμου (Αρ. Μητρώου 51, Περιφέρεια Αθηνών) εδρεύει
+            στα Παλαιά Λουτρά Αλίμου, στην Παραλία Αλίμου. Μέλος της Ελληνικής
+            Ιστιοπλοϊκής Ομοσπονδίας (Ε.Ι.Ο.), διοργανώνουμε πανελλήνια πρωταθλήματα
+            και υποδεχόμαστε αθλητές κάθε ηλικίας — από τα πρώτα βήματα στο νερό
+            μέχρι τους αγώνες υψηλού επιπέδου.
+          </p>
+          <div class="about__values">
+            <div class="about__value">
+              <div class="about__value-icon">&#9875;</div>
+              <div>
+                <div class="about__value-title" data-i18n="about_v1_title">Παράδοση</div>
+                <div class="about__value-text" data-i18n="about_v1_text">Αθλητική ιστορία στον Σαρωνικό</div>
+              </div>
+            </div>
+            <div class="about__value">
+              <div class="about__value-icon">&#9996;</div>
+              <div>
+                <div class="about__value-title" data-i18n="about_v2_title">Οικογένεια</div>
+                <div class="about__value-text" data-i18n="about_v2_text">Ένα σπίτι για γονείς και παιδιά</div>
+              </div>
+            </div>
+            <div class="about__value">
+              <div class="about__value-icon">&#127942;</div>
+              <div>
+                <div class="about__value-title" data-i18n="about_v3_title">Αριστεία</div>
+                <div class="about__value-text" data-i18n="about_v3_text">Διοργανωτής Πανελλήνιων Πρωταθλημάτων</div>
+              </div>
+            </div>
+            <div class="about__value">
+              <div class="about__value-icon">&#127754;</div>
+              <div>
+                <div class="about__value-title" data-i18n="about_v4_title">Τοποθεσία</div>
+                <div class="about__value-text" data-i18n="about_v4_text">Παλαιά Λουτρά, Παραλία Αλίμου</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== SPORTS ========== -->
+  <section class="sports" id="sports">
+    <div class="container">
+      <div class="sports__header reveal">
+        <div class="section-label" data-i18n="sports_label">Αθλήματα</div>
+        <h2 class="section-title" data-i18n-html="sports_title">Βρες το δικό σου<br>άθλημα</h2>
+        <p class="section-subtitle" data-i18n="sports_subtitle">
+          5 αθλήματα, αμέτρητες εμπειρίες. Ό,τι κι αν σε τραβάει,
+          η θάλασσα σε περιμένει.
+        </p>
+      </div>
+      <div class="sports__grid">
+        <div class="sport-card reveal reveal-delay-1">
+          <div class="sport-card__image">
+            <img src="https://plus.unsplash.com/premium_photo-1664391609489-976974c26eeb?w=600&q=80" alt="Ιστιοπλοΐα">
+            <div class="sport-card__image-overlay"></div>
+            <div class="sport-card__icon">&#9981;</div>
+          </div>
+          <div class="sport-card__body">
+            <h3 class="sport-card__name">Ιστιοπλοΐα</h3>
+            <p class="sport-card__desc" data-i18n="sport_sailing_desc">Optimist, ILCA, Techno 293 — από τα πρώτα μαθήματα μέχρι τους πανελλήνιους αγώνες.</p>
+            <span class="sport-card__link" data-i18n="learn_more">Μάθε Περισσότερα</span>
+          </div>
+        </div>
+        <div class="sport-card reveal reveal-delay-2">
+          <div class="sport-card__image">
+            <img src="https://images.unsplash.com/photo-1630521692330-997922b87e5a?w=600&q=80" alt="SUP">
+            <div class="sport-card__image-overlay"></div>
+            <div class="sport-card__icon">&#127940;</div>
+          </div>
+          <div class="sport-card__body">
+            <h3 class="sport-card__name">SUP</h3>
+            <p class="sport-card__desc" data-i18n="sport_sup_desc">Stand Up Paddleboarding για χαλάρωση ή αγώνες — ιδανικό για όλες τις ηλικίες.</p>
+            <span class="sport-card__link" data-i18n="learn_more">Μάθε Περισσότερα</span>
+          </div>
+        </div>
+        <div class="sport-card reveal reveal-delay-3">
+          <div class="sport-card__image">
+            <img src="https://images.unsplash.com/photo-1662280577406-34bcbc1243e6?w=600&q=80" alt="Windsurf">
+            <div class="sport-card__image-overlay"></div>
+            <div class="sport-card__icon">&#127788;</div>
+          </div>
+          <div class="sport-card__body">
+            <h3 class="sport-card__name">Windsurf</h3>
+            <p class="sport-card__desc" data-i18n="sport_wind_desc">Αδρεναλίνη και ελευθερία πάνω στα κύματα. Μαθήματα για αρχάριους και προχωρημένους.</p>
+            <span class="sport-card__link" data-i18n="learn_more">Μάθε Περισσότερα</span>
+          </div>
+        </div>
+        <div class="sport-card reveal reveal-delay-4">
+          <div class="sport-card__image">
+            <img src="https://www.hoppels.com/images/product_images/popup_images/bic-techno-f1-293-int-016.jpg" alt="Bic Techno 293">
+            <div class="sport-card__image-overlay"></div>
+            <div class="sport-card__icon">&#127946;</div>
+          </div>
+          <div class="sport-card__body">
+            <h3 class="sport-card__name">Bic Techno 293</h3>
+            <p class="sport-card__desc" data-i18n="sport_bic_desc">Η τέλεια εισαγωγή στο windsurf. Σταθερό, ασφαλές, ιδανικό για νέους αθλητές.</p>
+            <span class="sport-card__link" data-i18n="learn_more">Μάθε Περισσότερα</span>
+          </div>
+        </div>
+        <div class="sport-card reveal reveal-delay-6">
+          <div class="sport-card__image">
+            <img src="https://www.muchbetteradventures.com/magazine/content/images/size/w2000/2022/05/kayak-BC--1-.jpg" alt="Kayak">
+            <div class="sport-card__image-overlay"></div>
+            <div class="sport-card__icon">&#128675;</div>
+          </div>
+          <div class="sport-card__body">
+            <h3 class="sport-card__name">Kayak</h3>
+            <p class="sport-card__desc" data-i18n="sport_kayak_desc">Εξερεύνησε τις ακτές του Σαρωνικού. Sea kayaking, touring και αγωνιστικό.</p>
+            <span class="sport-card__link" data-i18n="learn_more">Μάθε Περισσότερα</span>
+          </div>
+        </div>
+      </div>
+      <!-- Fun Sport Quiz -->
+      <div class="sport-quiz reveal" id="sportQuiz">
+        <div class="sport-quiz__title" data-i18n="quiz_title">Ποιο άθλημα σου ταιριάζει;</div>
+        <div class="sport-quiz__text" data-i18n="quiz_subtitle">Διάλεξε τι σου αρέσει και θα σου πούμε!</div>
+        <div class="sport-quiz__options">
+          <button type="button" class="sport-quiz__option" onclick="pickSport(this, 'speed')" data-i18n="quiz_speed">Ταχύτητα</button>
+          <button type="button" class="sport-quiz__option" onclick="pickSport(this, 'relax')" data-i18n="quiz_relax">Χαλάρωση</button>
+          <button type="button" class="sport-quiz__option" onclick="pickSport(this, 'team')" data-i18n="quiz_team">Ομαδικά</button>
+          <button type="button" class="sport-quiz__option" onclick="pickSport(this, 'explore')" data-i18n="quiz_explore">Εξερεύνηση</button>
+          <button type="button" class="sport-quiz__option" onclick="pickSport(this, 'waves')" data-i18n="quiz_waves">Κύματα</button>
+        </div>
+        <div class="sport-quiz__result" id="quizResult"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Wave divider: sports → academy (dark) -->
+  <div class="wave-divider" style="background:var(--off-white);">
+    <svg viewBox="0 0 1440 80" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+      <path fill="#0A1628" d="M0,40 C360,80 720,0 1080,40 C1260,60 1380,50 1440,40 L1440,80 L0,80 Z">
+        <animate attributeName="d" dur="7s" repeatCount="indefinite"
+          values="M0,40 C360,80 720,0 1080,40 C1260,60 1380,50 1440,40 L1440,80 L0,80 Z;
+                  M0,30 C360,0 720,60 1080,20 C1260,40 1380,10 1440,30 L1440,80 L0,80 Z;
+                  M0,40 C360,80 720,0 1080,40 C1260,60 1380,50 1440,40 L1440,80 L0,80 Z"/>
+      </path>
+    </svg>
+  </div>
+
+  <!-- ========== YOUTH ACADEMIES ========== -->
+  <section class="academy" id="academy">
+    <div class="container">
+      <div class="academy__grid">
+        <div class="academy__content reveal">
+          <div class="section-label" style="color: var(--teal-light);" data-i18n="academy_label">Ακαδημίες Νέων</div>
+          <h2 class="section-title section-title--light" data-i18n-html="academy_title">Από αρχάριος<br>σε πρωταθλητή</h2>
+          <p class="section-subtitle section-subtitle--light" data-i18n="academy_subtitle">
+            Οι ακαδημίες μας εισάγουν τα παιδιά στον κόσμο των θαλάσσιων αθλημάτων,
+            βήμα βήμα — από τη γνωριμία με τη θάλασσα μέχρι τη συμμετοχή σε αγώνες.
+          </p>
+          <div class="academy__pathway">
+            <div class="academy__step">
+              <div class="academy__step-num">1</div>
+              <div>
+                <div class="academy__step-title" data-i18n="acad_step1_title">Γνωριμία με τη Θάλασσα</div>
+                <div class="academy__step-text" data-i18n="acad_step1_text">Βασικές δεξιότητες, ασφάλεια στο νερό, παιχνίδι και εξοικείωση.</div>
+                <span class="academy__step-badge badge--beginner" data-i18n="acad_beginner">Αρχάριοι</span>
+              </div>
+            </div>
+            <div class="academy__step">
+              <div class="academy__step-num">2</div>
+              <div>
+                <div class="academy__step-title" data-i18n="acad_step2_title">Αθλητική Ανάπτυξη</div>
+                <div class="academy__step-text" data-i18n="acad_step2_text">Τεχνική εκπαίδευση, πρώτοι αγώνες, ομαδικό πνεύμα.</div>
+                <span class="academy__step-badge badge--intermediate" data-i18n="acad_intermediate">Μέσοι</span>
+              </div>
+            </div>
+            <div class="academy__step">
+              <div class="academy__step-num">3</div>
+              <div>
+                <div class="academy__step-title" data-i18n="acad_step3_title">Αγωνιστικό Τμήμα</div>
+                <div class="academy__step-text" data-i18n="acad_step3_text">Πανελλήνιοι αγώνες, υψηλός ανταγωνισμός, εξέλιξη στον αθλητισμό.</div>
+                <span class="academy__step-badge badge--advanced" data-i18n="acad_advanced">Προχωρημένοι</span>
+              </div>
+            </div>
+          </div>
+          <div class="academy__cta">
+            <a href="mailto:info@noalimou.gr" class="btn btn--primary" data-i18n="academy_cta">Εγγραφή Ακαδημιών</a>
+          </div>
+        </div>
+        <div class="academy__visual reveal reveal-delay-2">
+          <div class="academy__image">
+            <img src="https://images.unsplash.com/photo-1717054373388-b405bfd27707?w=800&q=80" alt="Νεαροί αθλητές στη θάλασσα">
+          </div>
+          <div class="wave-mascot">&#127754;</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== SUMMER CAMP ========== -->
+  <section class="camp" id="camp">
+    <div class="camp__bg">
+      <img src="https://images.unsplash.com/photo-1636395480274-1af355931159?w=1920&q=80" alt="Καλοκαίρι στη θάλασσα">
+    </div>
+    <div class="container camp__content reveal">
+      <div class="camp__icon">&#9728;&#65039;</div>
+      <h2 class="camp__title" data-i18n-html="camp_title">Summer Camp<br>στον Ν.Ο.Α.</h2>
+      <p class="camp__text" data-i18n="camp_text">
+        Κάθε καλοκαίρι, η Παραλία Αλίμου γεμίζει νεαρούς αθλητές!
+        Θαλάσσια αθλήματα, παιχνίδι, φίλοι και εμπειρίες ζωής.
+        Επικοινωνήστε μαζί μας για το πρόγραμμα.
+      </p>
+      <div class="camp__features">
+        <span class="camp__feature">&#9981; Ιστιοπλοΐα</span>
+        <span class="camp__feature">&#127940; SUP</span>
+        <span class="camp__feature">&#127788; Windsurf</span>
+        <span class="camp__feature">&#128675; Kayak</span>
+        <span class="camp__feature">&#127946; Bic Techno 293</span>
+      </div>
+      <a href="mailto:info@noalimou.gr?subject=Summer%20Camp" class="btn btn--gold" data-i18n="camp_cta">Ρωτήστε μας</a>
+    </div>
+  </section>
+
+  <!-- ========== EVENTS ========== -->
+  <section class="events" id="events">
+    <div class="container">
+      <div class="events__header reveal">
+        <div class="section-label" data-i18n="events_label">Εκδηλώσεις</div>
+        <h2 class="section-title" data-i18n-html="events_title">Αγώνες &<br>Διοργανώσεις</h2>
+        <p class="section-subtitle" data-i18n="events_subtitle">Ο Ν.Ο.Α. φιλοξενεί και διοργανώνει αγώνες υψηλού επιπέδου στην Παραλία Αλίμου.</p>
+      </div>
+      <div class="events__grid">
+        <div class="event-card reveal reveal-delay-1">
+          <div class="event-card__date">
+            <div class="event-card__date-box">
+              <div class="event-card__date-day">06</div>
+              <div class="event-card__date-month">Οκτ</div>
+            </div>
+            <div class="event-card__date-info">
+              <div class="event-card__category">Windsurf</div>
+              <div class="event-card__title">Πανελλήνιο Techno 293</div>
+            </div>
+          </div>
+          <div class="event-card__body">
+            <p class="event-card__desc">Το Πανελλήνιο Πρωτάθλημα Techno 293 & 293 Plus φιλοξενήθηκε στον Ν.Ο.Α. — 94 σκάφη, 10 ιστιοδρομίες!</p>
+            <span class="event-card__tag event-card__tag--windsurf">Techno 293</span>
+          </div>
+        </div>
+        <div class="event-card reveal reveal-delay-2">
+          <div class="event-card__date">
+            <div class="event-card__date-box">
+              <div class="event-card__date-day">03</div>
+              <div class="event-card__date-month">Ιούν</div>
+            </div>
+            <div class="event-card__date-info">
+              <div class="event-card__category">Ιστιοπλοΐα</div>
+              <div class="event-card__title">ILCA 6 & 7 Masters</div>
+            </div>
+          </div>
+          <div class="event-card__body">
+            <p class="event-card__desc">Ανοιχτό Πανελλήνιο ILCA 6 & 7 Masters — Άψογη διοργάνωση του Ν.Ο.Α. Κόντης 2ος, Μαλλή 3η στο ILCA 6.</p>
+            <span class="event-card__tag event-card__tag--sailing">ILCA Masters</span>
+          </div>
+        </div>
+        <div class="event-card reveal reveal-delay-3">
+          <div class="event-card__date">
+            <div class="event-card__date-box">
+              <div class="event-card__date-day">27</div>
+              <div class="event-card__date-month">Μάι</div>
+            </div>
+            <div class="event-card__date-info">
+              <div class="event-card__category">Ιστιοπλοΐα</div>
+              <div class="event-card__title">My First Race 2023</div>
+            </div>
+          </div>
+          <div class="event-card__body">
+            <p class="event-card__desc">Πανελλήνιος διασυλλογικός αγώνας Optimist για νεαρούς αθλητές (γενν. 2011+), σε συνεργασία με Ε.Ι.Ο. και Δήμο Αλίμου.</p>
+            <span class="event-card__tag event-card__tag--sailing">Optimist</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== NEWS ========== -->
+  <section class="news" id="news">
+    <div class="container">
+      <div class="news__header">
+        <div>
+          <div class="section-label" data-i18n="news_label">Τελευταία Νέα</div>
+          <h2 class="section-title" data-i18n-html="news_title">Τι γίνεται<br>στον Ν.Ο.Α.</h2>
+        </div>
+        <a href="https://www.instagram.com/noalimou" target="_blank" rel="noopener" class="btn btn--dark" data-i18n="news_all">Όλα τα Νέα</a>
+      </div>
+      <div class="news__grid">
+        <div class="news-card reveal reveal-delay-1">
+          <div class="news-card__image">
+            <img src="https://images.unsplash.com/photo-1602877641253-3a985752a0d4?w=600&q=80" loading="lazy" alt="Πανελλήνιο Πρωτάθλημα Techno 293">
+          </div>
+          <div class="news-card__body">
+            <div class="news-card__date">6 Οκτωβρίου 2025</div>
+            <h3 class="news-card__title">Με επιτυχία το Πανελλήνιο Πρωτάθλημα Techno 293 στον Άλιμο</h3>
+            <p class="news-card__excerpt">Ο Ν.Ο.Α. φιλοξένησε με μεγάλη επιτυχία το Πανελλήνιο Πρωτάθλημα Techno 293 & 293 Plus — 10 ιστιοδρομίες, 94 σκάφη, πολύ δυνατός αγώνας!</p>
+            <a href="https://www.eio.gr/me-epitychia-oloklirothike-to-panellinio-protathlima-techno293-ston-alimo/" target="_blank" rel="noopener" class="sport-card__link" style="margin-top:0.5rem;">Διάβασε περισσότερα</a>
+          </div>
+        </div>
+        <div class="news-card reveal reveal-delay-2">
+          <div class="news-card__image">
+            <img src="https://images.unsplash.com/photo-1540946485063-a40da27545f8?w=600&q=80" loading="lazy" alt="ILCA Masters">
+          </div>
+          <div class="news-card__body">
+            <div class="news-card__date">3 Ιουνίου 2024</div>
+            <h3 class="news-card__title">Τα συγχαρητήρια όλων για τη διοργάνωση ILCA 6 & 7 Masters</h3>
+            <p class="news-card__excerpt">Ο Ν.Ο.Α. απέσπασε τα συγχαρητήρια για την άψογη διοργάνωση. Ο Αντώνης Κόντης 2ος και η Τριανταφυλλιά Μαλλή 3η στο ILCA 6!</p>
+            <a href="https://www.eio.gr/ta-sygcharitiria-olon-apespase-o-n-o-alimou-gia-tin-apsogi-diorganosi-tou-panelliniou-protathlimatos-ilca-6-kai-ilca-7-masters/" target="_blank" rel="noopener" class="sport-card__link" style="margin-top:0.5rem;">Διάβασε περισσότερα</a>
+          </div>
+        </div>
+        <div class="news-card reveal reveal-delay-3">
+          <div class="news-card__image">
+            <img src="https://images.unsplash.com/photo-1630521692330-997922b87e5a?w=600&q=80" loading="lazy" alt="Εγγραφές 2026">
+          </div>
+          <div class="news-card__body">
+            <div class="news-card__date">Απρίλιος 2026</div>
+            <h3 class="news-card__title">Ξεκίνησαν οι εγγραφές για τη νέα αγωνιστική σεζόν 2026</h3>
+            <p class="news-card__excerpt">Εγγραφές σε όλα τα αθλήματα — Ιστιοπλοΐα, Windsurf, Bic Techno 293, SUP, Kayak και Αθλητισμός. Επικοινωνήστε μαζί μας!</p>
+            <a href="mailto:info@noalimou.gr?subject=Εγγραφές%202026" class="sport-card__link" style="margin-top:0.5rem;">Επικοινωνία</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== GALLERY + SOCIAL FEED ========== -->
+  <section class="gallery" id="gallery">
+    <div class="container">
+      <div class="gallery__header reveal">
+        <div class="section-label" data-i18n="gallery_label">Γκαλερί & Social</div>
+        <h2 class="section-title" data-i18n-html="gallery_title">Στιγμές στη<br>θάλασσα</h2>
+        <p class="section-subtitle" data-i18n="gallery_subtitle">Φωτογραφίες από τους αγώνες, τα μαθήματα και τη ζωή στον Ν.Ο.Α. Ακολούθησέ μας!</p>
+      </div>
+      <!-- Photo grid -->
+      <div class="gallery__grid reveal">
+        <div class="gallery__item gallery__item--wide" tabindex="0" role="button" onclick="openLightbox(this)" onkeydown="if(event.key==='Enter')openLightbox(this)">
+          <img src="https://images.unsplash.com/photo-1540946485063-a40da27545f8?w=800&q=80" loading="lazy" alt="Ιστιοπλοΐα αγώνας">
+        </div>
+        <div class="gallery__item" tabindex="0" role="button" onclick="openLightbox(this)" onkeydown="if(event.key==='Enter')openLightbox(this)">
+          <img src="https://images.unsplash.com/photo-1530870110042-98b2cb110834?w=600&q=80" loading="lazy" alt="Windsurf">
+        </div>
+        <div class="gallery__item" tabindex="0" role="button" onclick="openLightbox(this)" onkeydown="if(event.key==='Enter')openLightbox(this)">
+          <img src="https://images.unsplash.com/photo-1630521692330-997922b87e5a?w=600&q=80" loading="lazy" alt="SUP">
+        </div>
+        <div class="gallery__item" tabindex="0" role="button" onclick="openLightbox(this)" onkeydown="if(event.key==='Enter')openLightbox(this)">
+          <img src="https://images.unsplash.com/photo-1472745433479-4556f22e32c2?w=600&q=80" loading="lazy" alt="Kayak">
+        </div>
+        <div class="gallery__item gallery__item--wide" tabindex="0" role="button" onclick="openLightbox(this)" onkeydown="if(event.key==='Enter')openLightbox(this)">
+          <img src="https://images.unsplash.com/photo-1636395480274-1af355931159?w=800&q=80" loading="lazy" alt="Ηλιοβασίλεμα Σαρωνικός">
+        </div>
+        <div class="gallery__item" tabindex="0" role="button" onclick="openLightbox(this)" onkeydown="if(event.key==='Enter')openLightbox(this)">
+          <img src="https://images.unsplash.com/photo-1602877641253-3a985752a0d4?w=600&q=80" loading="lazy" alt="Σαρωνικός Κόλπος">
+        </div>
+        <div class="gallery__item" tabindex="0" role="button" onclick="openLightbox(this)" onkeydown="if(event.key==='Enter')openLightbox(this)">
+          <img src="https://images.unsplash.com/photo-1531722569936-825d3dd91b15?w=600&q=80" loading="lazy" alt="Νεαροί αθλητές">
+        </div>
+      </div>
+      <!-- Social media live feeds -->
+      <div class="social-feeds reveal" style="margin-top:3rem;">
+        <div class="social-feeds__grid">
+          <div class="social-feeds__item">
+            <h3 class="social-feeds__title">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="#E4405F" style="vertical-align:middle;margin-right:0.5rem;"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
+              Instagram
+            </h3>
+            <div class="social-feeds__embed social-feeds__embed--ig">
+              <a href="https://www.instagram.com/noalimou" target="_blank" rel="noopener" class="social-feeds__ig-link">
+                <div class="social-feeds__ig-card">
+                  <div class="social-feeds__ig-header">
+                    <div class="social-feeds__ig-avatar">NOA</div>
+                    <div>
+                      <strong>@noalimou</strong>
+                      <span style="display:block;font-size:0.75rem;color:var(--gray-400);">Ναυτικός Όμιλος Αλίμου</span>
+                    </div>
+                  </div>
+                  <div class="social-feeds__ig-grid">
+                    <img src="https://images.unsplash.com/photo-1540946485063-a40da27545f8?w=300&q=80" loading="lazy" alt="NOA Instagram 1">
+                    <img src="https://images.unsplash.com/photo-1530870110042-98b2cb110834?w=300&q=80" loading="lazy" alt="NOA Instagram 2">
+                    <img src="https://images.unsplash.com/photo-1630521692330-997922b87e5a?w=300&q=80" loading="lazy" alt="NOA Instagram 3">
+                    <img src="https://images.unsplash.com/photo-1472745433479-4556f22e32c2?w=300&q=80" loading="lazy" alt="NOA Instagram 4">
+                    <img src="https://images.unsplash.com/photo-1636395480274-1af355931159?w=300&q=80" loading="lazy" alt="NOA Instagram 5">
+                    <img src="https://images.unsplash.com/photo-1531722569936-825d3dd91b15?w=300&q=80" loading="lazy" alt="NOA Instagram 6">
+                  </div>
+                  <div class="social-feeds__ig-cta" data-i18n="ig_cta">Ακολούθησέ μας στο Instagram &rarr;</div>
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Lightbox -->
+  <div class="lightbox" id="lightbox" onclick="closeLightbox()">
+    <button class="lightbox__close" onclick="event.stopPropagation(); closeLightbox()">&times;</button>
+    <img id="lightboxImg" src="" alt="Gallery image" onclick="event.stopPropagation()">
+  </div>
+
+  <!-- ========== MEMBERSHIP ========== -->
+  <section class="membership" id="membership">
+    <div class="container">
+      <div class="membership__header reveal">
+        <div class="section-label" style="color: var(--gold);" data-i18n="member_label">Μέλη</div>
+        <h2 class="section-title section-title--light" data-i18n-html="member_title">Γίνε μέλος<br>της οικογένειάς μας</h2>
+        <p class="section-subtitle section-subtitle--light" data-i18n="member_subtitle">Επικοινωνήστε μαζί μας για πληροφορίες εγγραφής και συνδρομών.</p>
+      </div>
+      <div class="membership__grid">
+        <div class="membership-card reveal reveal-delay-1">
+          <div class="membership-card__icon">&#9875;</div>
+          <h3 class="membership-card__title" data-i18n="tier_individual">Ατομικό</h3>
+          <p class="membership-card__desc" data-i18n="tier_individual_desc">Για ενήλικες που θέλουν να ασχοληθούν με τα θαλάσσια αθλήματα.</p>
+          <ul class="membership-card__features">
+            <li data-i18n="tier_f1">Πρόσβαση στις εγκαταστάσεις</li>
+            <li data-i18n="tier_f2">Συμμετοχή σε αθλήματα</li>
+            <li data-i18n="tier_f3">Ενημέρωση για αγώνες</li>
+            <li data-i18n="tier_f4">Δικτύωση με την κοινότητα</li>
+          </ul>
+          <a href="mailto:info@noalimou.gr?subject=Εγγραφή%20Ατομικό" class="btn btn--primary" style="width:100%;justify-content:center;" data-i18n="tier_cta">Αίτηση Εγγραφής</a>
+        </div>
+        <div class="membership-card membership-card--featured reveal reveal-delay-2">
+          <span class="membership-card__badge" data-i18n="tier_popular">ΔΗΜΟΦΙΛΕΣ</span>
+          <div class="membership-card__icon">&#128106;</div>
+          <h3 class="membership-card__title" data-i18n="tier_family">Οικογενειακό</h3>
+          <p class="membership-card__desc" data-i18n="tier_family_desc">Για γονείς και παιδιά που θέλουν να ζήσουν τη θάλασσα μαζί.</p>
+          <ul class="membership-card__features">
+            <li data-i18n="tier_ff1">Πρόσβαση για γονείς + παιδιά</li>
+            <li data-i18n="tier_ff2">Συμμετοχή σε ακαδημίες</li>
+            <li data-i18n="tier_ff3">Οικογενειακές δραστηριότητες</li>
+            <li data-i18n="tier_ff4">Ενημέρωση για εκδηλώσεις</li>
+            <li data-i18n="tier_ff5">Ζητήστε πληροφορίες</li>
+          </ul>
+          <a href="mailto:info@noalimou.gr?subject=Εγγραφή%20Οικογενειακό" class="btn btn--gold" style="width:100%;justify-content:center;" data-i18n="tier_cta">Αίτηση Εγγραφής</a>
+        </div>
+        <div class="membership-card reveal reveal-delay-3">
+          <div class="membership-card__icon">&#127942;</div>
+          <h3 class="membership-card__title" data-i18n="tier_athletic">Αθλητικό</h3>
+          <p class="membership-card__desc" data-i18n="tier_athletic_desc">Για αθλητές που στοχεύουν σε αγωνιστική δραστηριότητα μέσω του Ομίλου.</p>
+          <ul class="membership-card__features">
+            <li data-i18n="tier_af1">Αγωνιστική προπόνηση</li>
+            <li data-i18n="tier_af2">Συμμετοχή σε αγώνες Ε.Ι.Ο.</li>
+            <li data-i18n="tier_af3">Αθλητική υποστήριξη</li>
+            <li data-i18n="tier_af4">Χρήση εξοπλισμού</li>
+          </ul>
+          <a href="mailto:info@noalimou.gr?subject=Εγγραφή%20Αθλητικό" class="btn btn--primary" style="width:100%;justify-content:center;" data-i18n="tier_cta">Αίτηση Εγγραφής</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== WEATHER & SPONSORS ========== -->
+  <section class="weather-sponsors" id="weather">
+    <div class="container">
+      <div class="weather-sponsors__grid">
+        <div class="weather-widget reveal">
+          <div class="weather-widget__header">
+            <div class="weather-widget__icon">&#127774;</div>
+            <div>
+              <div class="weather-widget__title" data-i18n="weather_title">Καιρός — Σαρωνικός</div>
+              <div class="weather-widget__location" data-i18n="weather_location">Παραλία Αλίμου, Αττική</div>
+            </div>
+          </div>
+          <div class="weather-widget__data">
+            <div>
+              <div class="weather-widget__item-value" id="weatherTemp">24°</div>
+              <div class="weather-widget__item-label" data-i18n="w_temp">Θερμοκρασία</div>
+            </div>
+            <div>
+              <div class="weather-widget__item-value" id="weatherWind">12kn</div>
+              <div class="weather-widget__item-label" data-i18n="w_wind">Άνεμος</div>
+            </div>
+            <div>
+              <div class="weather-widget__item-value" id="weatherSea">0.5m</div>
+              <div class="weather-widget__item-label" data-i18n="w_sea">Κυματισμός</div>
+            </div>
+          </div>
+          <div class="weather-widget__note" id="weatherNote">Φορτώνει δεδομένα...</div>
+        </div>
+        <div class="reveal reveal-delay-2">
+          <div class="sponsors__title" data-i18n="sponsors_title">Θεσμικοί Υποστηρικτές</div>
+          <div class="sponsors__grid">
+            <div class="sponsors__item">Δήμος Αλίμου</div>
+            <div class="sponsors__item">Ε.Ι.Ο.</div>
+            <div class="sponsors__item">Γ.Γ.Α.</div>
+            <div class="sponsors__item">Ε.Α.Α.</div>
+            <div class="sponsors__item">Περιφέρεια Αττικής</div>
+            <div class="sponsors__item">Υποστηρικτής</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== FLOATING CTA ========== -->
+  <div class="floating-cta">
+    <div style="position:relative;">
+      <a href="tel:2109838358" class="floating-cta__btn floating-cta__btn--phone" aria-label="Τηλεφωνήστε μας">&#128222;</a>
+      <span class="floating-cta__tooltip">210 983 8358</span>
+    </div>
+    <div style="position:relative;">
+      <a href="mailto:info@noalimou.gr" class="floating-cta__btn floating-cta__btn--email" aria-label="Στείλτε email">&#9993;</a>
+      <span class="floating-cta__tooltip">info@noalimou.gr</span>
+    </div>
+    <button class="floating-cta__btn floating-cta__btn--top" id="scrollTopBtn" onclick="window.scrollTo({top:0,behavior:'smooth'})" aria-label="Πάνω">&#8593;</button>
+  </div>
+
+  <!-- ========== FOOTER ========== -->
+  <footer class="footer" id="contact">
+    <div class="container">
+      <div class="footer__grid">
+        <div>
+          <div class="footer__brand-name">Ν.Ο.Α.</div>
+          <p class="footer__brand-desc" data-i18n="footer_desc">
+            Ναυτικός Όμιλος Αλίμου — Αρ. Μητρώου 51. Ιστιοπλοΐα, SUP, Windsurf,
+            Bic Techno 293 και Kayak στην Παραλία Αλίμου.
+          </p>
+          <div class="footer__social">
+            <a href="https://www.instagram.com/noalimou" target="_blank" rel="noopener" aria-label="Instagram">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
+            </a>
+            <a href="https://www.youtube.com/results?search_query=%CE%9D%CE%B1%CF%85%CF%84%CE%B9%CE%BA%CF%8C%CF%82+%CE%8C%CE%BC%CE%B9%CE%BB%CE%BF%CF%82+%CE%91%CE%BB%CE%AF%CE%BC%CE%BF%CF%85" target="_blank" rel="noopener" aria-label="YouTube">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M23.498 6.186a3.016 3.016 0 00-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 00.502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 002.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 002.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+            </a>
+          </div>
+        </div>
+        <div>
+          <div class="footer__heading" data-i18n="footer_links">Σύνδεσμοι</div>
+          <ul class="footer__links">
+            <li><a href="#about" data-i18n="nav_about">Ο Όμιλος</a></li>
+            <li><a href="#sports" data-i18n="nav_sports">Αθλήματα</a></li>
+            <li><a href="#academy" data-i18n="nav_academy">Ακαδημίες</a></li>
+            <li><a href="#events" data-i18n="nav_events">Εκδηλώσεις</a></li>
+            <li><a href="#gallery" data-i18n="nav_gallery">Γκαλερί</a></li>
+            <li><a href="#membership" data-i18n="nav_cta">Εγγραφή</a></li>
+          </ul>
+        </div>
+        <div>
+          <div class="footer__heading" data-i18n="footer_sports">Αθλήματα</div>
+          <ul class="footer__links">
+            <li><a href="#sports">Ιστιοπλοΐα</a></li>
+            <li><a href="#sports">SUP</a></li>
+            <li><a href="#sports">Windsurf</a></li>
+            <li><a href="#sports">Bic Techno 293</a></li>
+            <li><a href="#sports">Kayak</a></li>
+          </ul>
+        </div>
+        <div>
+          <div class="footer__heading" data-i18n="footer_contact">Επικοινωνία</div>
+          <div class="footer__contact-item">
+            <div class="footer__contact-icon">&#128205;</div>
+            <div class="footer__contact-text">
+              Παλαιά Λουτρά Αλίμου<br>
+              Παραλία Αλίμου<br>
+              Άλιμος, Αθηνών
+            </div>
+          </div>
+          <div class="footer__contact-item">
+            <div class="footer__contact-icon">&#128222;</div>
+            <div class="footer__contact-text">
+              <a href="tel:2109838358">210 983 8358</a>
+            </div>
+          </div>
+          <div class="footer__contact-item">
+            <div class="footer__contact-icon">&#9993;</div>
+            <div class="footer__contact-text">
+              <a href="mailto:info@noalimou.gr">info@noalimou.gr</a>
+            </div>
+          </div>
+          <div class="footer__newsletter">
+            <div class="footer__heading" data-i18n="footer_newsletter">Newsletter</div>
+            <form class="footer__newsletter-form" onsubmit="event.preventDefault(); this.style.display='none'; document.getElementById('newsletterSuccess').style.display='block';">
+              <input type="email" class="footer__newsletter-input" placeholder="Το email σας..." data-i18n-placeholder="newsletter_placeholder" required>
+              <button type="submit" class="footer__newsletter-btn">OK</button>
+            </form>
+            <div class="footer__newsletter-success" id="newsletterSuccess" style="display:none; color:var(--teal-light); font-size:0.9rem; margin-top:0.5rem;" data-i18n="newsletter_thanks">Ευχαριστούμε για την εγγραφή!</div>
+          </div>
+        </div>
+        <!-- Google Maps -->
+        <div class="footer__map">
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3147.3!2d23.7095!3d37.9105!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14a1bb16c1c5e92d%3A0x271a39bc2cb1e765!2zzqDOsc-BzrHOu86vzqwgzpHOu86vzrzOv8-F!5e0!3m2!1sel!2sgr!4v1700000000000!5m2!1sel!2sgr" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Χάρτης - Παραλία Αλίμου"></iframe>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <div class="footer__copy" data-i18n="footer_copy">&copy; 2026 Ναυτικός Όμιλος Αλίμου. Με επιφύλαξη παντός δικαιώματος.</div>
+        <div class="footer__registry" data-i18n="footer_registry">Αρ. Μητρώου: 51 &middot; Ε.Α.Α. / Γ.Γ.Α.: ΝΑ01 &middot; Αγωνιστική Περιφέρεια Αθηνών</div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ========== JAVASCRIPT ========== -->
+  <script>
+    // Mobile menu
+    const hamburger = document.getElementById('hamburger');
+    const mobileMenu = document.getElementById('mobileMenu');
+    hamburger.addEventListener('click', () => {
+      hamburger.classList.toggle('active');
+      mobileMenu.classList.toggle('open');
+      document.body.style.overflow = mobileMenu.classList.contains('open') ? 'hidden' : '';
+    });
+    function closeMobile() {
+      hamburger.classList.remove('active');
+      mobileMenu.classList.remove('open');
+      document.body.style.overflow = '';
+    }
+
+    // Sticky header + scroll-to-top button
+    window.addEventListener('scroll', () => {
+      document.getElementById('header').classList.toggle('scrolled', window.scrollY > 60);
+      const topBtn = document.getElementById('scrollTopBtn');
+      if (topBtn) topBtn.classList.toggle('visible', window.scrollY > 600);
+    });
+
+    // Scroll reveal
+    const revealObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) entry.target.classList.add('visible');
+      });
+    }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
+    document.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));
+
+    // Lightbox
+    function openLightbox(el) {
+      const src = el.querySelector('img').src;
+      document.getElementById('lightboxImg').src = src;
+      document.getElementById('lightbox').classList.add('active');
+      document.body.style.overflow = 'hidden';
+    }
+    function closeLightbox() {
+      document.getElementById('lightbox').classList.remove('active');
+      document.body.style.overflow = '';
+    }
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') closeLightbox();
+    });
+
+    // Video fallback — if video fails, show poster image
+    const heroVideo = document.getElementById('heroVideo');
+    const heroVideoSource = document.getElementById('heroVideoSource');
+    if (heroVideo && heroVideoSource) {
+      heroVideoSource.addEventListener('error', () => {
+        heroVideo.style.display = 'none';
+        const fallback = document.querySelector('.hero__bg-fallback');
+        if (fallback) fallback.style.display = 'block';
+      });
+      heroVideo.addEventListener('error', () => {
+        heroVideo.style.display = 'none';
+        const fallback = document.querySelector('.hero__bg-fallback');
+        if (fallback) fallback.style.display = 'block';
+      });
+    }
+
+    // Sport quiz
+    const sportMap = {
+      speed: '&#9981; Windsurf — Ταχύτητα και αδρεναλίνη στα κύματα!',
+      relax: '&#127940; SUP — Ηρεμία πάνω στο νερό, στον δικό σου ρυθμό!',
+      team: '&#9981; Ιστιοπλοΐα — Συνεργασία, στρατηγική, θάλασσα!',
+      explore: '&#128675; Kayak — Εξερεύνησε κρυφές ακτές και σπηλιές!',
+      waves: '&#127946; Bic Techno 293 — Δάμασε τον αέρα πάνω στα κύματα!'
+    };
+    function pickSport(el, key) {
+      document.querySelectorAll('.sport-quiz__option').forEach(o => o.classList.remove('active'));
+      el.classList.add('active');
+      document.getElementById('quizResult').innerHTML = sportMap[key];
+    }
+
+    // Counter animation for stats
+    function animateCounters() {
+      document.querySelectorAll('.hero__stat-number').forEach(el => {
+        const text = el.textContent.trim();
+        const match = text.match(/^([^0-9]*)(\d+)([^0-9]*)$/);
+        if (!match) return; // skip non-numeric like "Ε.Ι.Ο."
+        const prefix = match[1];
+        const target = parseInt(match[2]);
+        const suffix = match[3];
+        let current = 0;
+        const increment = Math.max(1, Math.floor(target / 40));
+        const timer = setInterval(() => {
+          current += increment;
+          if (current >= target) { current = target; clearInterval(timer); }
+          el.textContent = prefix + current + suffix;
+        }, 30);
+      });
+    }
+    // Trigger counters when hero stats become visible
+    const statsObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          animateCounters();
+          statsObserver.disconnect();
+        }
+      });
+    }, { threshold: 0.5 });
+    const heroStats = document.querySelector('.hero__stats');
+    if (heroStats) statsObserver.observe(heroStats);
+
+    // Live weather from Open-Meteo API (free, no key needed)
+    // Alimos coordinates: 37.91°N, 23.71°E
+    async function fetchWeather() {
+      try {
+        const res = await fetch('https://api.open-meteo.com/v1/forecast?latitude=37.91&longitude=23.71&current=temperature_2m,wind_speed_10m,wind_direction_10m&hourly=wave_height&forecast_days=1&timezone=Europe%2FAthens');
+        const data = await res.json();
+        const temp = Math.round(data.current.temperature_2m);
+        const windKmh = data.current.wind_speed_10m;
+        const windKn = Math.round(windKmh * 0.539957);
+        const windDir = data.current.wind_direction_10m;
+        const waveHeight = data.hourly.wave_height ? data.hourly.wave_height[0] : null;
+
+        document.getElementById('weatherTemp').textContent = temp + '\u00B0C';
+        document.getElementById('weatherWind').textContent = windKn + 'kn';
+        if (waveHeight !== null) {
+          document.getElementById('weatherSea').textContent = waveHeight + 'm';
+        }
+
+        // Wind direction arrow
+        const directions = ['B', 'BA', 'A', 'NA', 'N', 'NΔ', 'Δ', 'BΔ'];
+        const dirIndex = Math.round(windDir / 45) % 8;
+        document.getElementById('weatherNote').textContent =
+          'Live \u2014 \u0386\u03BD\u03B5\u03BC\u03BF\u03C2: ' + directions[dirIndex] + ' ' + windKn + 'kn \u2014 \u0395\u03BD\u03B7\u03BC\u03B5\u03C1\u03CE\u03B8\u03B7\u03BA\u03B5 \u03C4\u03CE\u03C1\u03B1';
+      } catch (e) {
+        document.getElementById('weatherNote').textContent = '\u0395\u03BD\u03B4\u03B5\u03B9\u03BA\u03C4\u03B9\u03BA\u03AD\u03C2 \u03C4\u03B9\u03BC\u03AD\u03C2 \u2014 API \u03BC\u03B7 \u03B4\u03B9\u03B1\u03B8\u03AD\u03C3\u03B9\u03BC\u03BF';
+      }
+    }
+    fetchWeather();
+
+    // ========== LANGUAGE TOGGLE ==========
+    const translations = {
+      en: {
+        // Nav
+        nav_about: 'About Us', nav_sports: 'Sports', nav_academy: 'Academies',
+        nav_events: 'Events', nav_news: 'News', nav_gallery: 'Gallery',
+        nav_contact: 'Contact', nav_cta: 'Join Us',
+        // Hero
+        hero_badge: 'Alimos Beach — Athens',
+        hero_title1: 'Nautical Club of',
+        hero_title_accent: 'Alimos',
+        hero_subtitle: 'At Alimos Beach, on the waters of the Saronic Gulf. Sailing, SUP, Windsurf, Bic Techno 293 and Kayak — for every age, every level.',
+        hero_cta1: 'Become a Member', hero_cta2: 'Our Sports',
+        hero_stat1: 'Sports', hero_stat2: 'Registry No.', hero_stat3: 'Federation Member', hero_stat4: 'E.A.A. / G.G.A.',
+        // About
+        about_label: 'About Us',
+        about_title: 'In the Heart<br>of the Athenian Riviera',
+        about_desc: 'The Nautical Club of Alimos (Registry No. 51, Athens Region) is located at the Old Baths of Alimos, on Alimos Beach. A member of the Hellenic Sailing Federation (E.I.O.), we organize national championships and welcome athletes of all ages — from first steps on the water to high-level competition.',
+        about_v1_title: 'Tradition', about_v1_text: 'Athletic history on the Saronic Gulf',
+        about_v2_title: 'Family', about_v2_text: 'A home for parents and children',
+        about_v3_title: 'Excellence', about_v3_text: 'Organizer of National Championships',
+        about_v4_title: 'Location', about_v4_text: 'Old Baths, Alimos Beach',
+        // Sports
+        sports_label: 'Sports',
+        sports_title: 'Find your<br>sport',
+        sports_subtitle: '5 sports, countless experiences. Whatever draws you in, the sea is waiting.',
+        sport_sailing_desc: 'Optimist, ILCA, Techno 293 — from first lessons to national championships.',
+        sport_sup_desc: 'Stand Up Paddleboarding for relaxation or racing — ideal for all ages.',
+        sport_wind_desc: 'Adrenaline and freedom on the waves. Lessons for beginners and advanced.',
+        sport_bic_desc: 'The perfect introduction to windsurf. Stable, safe, ideal for young athletes.',
+        sport_kayak_desc: 'Explore the Saronic coastline. Sea kayaking, touring and competitive.',
+        learn_more: 'Learn More',
+        // Quiz
+        quiz_title: 'Which sport suits you?',
+        quiz_subtitle: 'Choose what you like and we\'ll tell you!',
+        quiz_speed: 'Speed', quiz_relax: 'Relaxation', quiz_team: 'Team Sports',
+        quiz_explore: 'Exploration', quiz_waves: 'Waves',
+        // Academy
+        academy_label: 'Youth Academies',
+        academy_title: 'From beginner<br>to champion',
+        academy_subtitle: 'Our academies introduce children to the world of water sports, step by step — from getting to know the sea to competing in races.',
+        acad_step1_title: 'Getting to Know the Sea', acad_step1_text: 'Basic skills, water safety, play and familiarization.',
+        acad_beginner: 'Beginners',
+        acad_step2_title: 'Athletic Development', acad_step2_text: 'Technical training, first races, team spirit.',
+        acad_intermediate: 'Intermediate',
+        acad_step3_title: 'Competitive Division', acad_step3_text: 'National races, high competition, athletic progression.',
+        acad_advanced: 'Advanced',
+        academy_cta: 'Academy Registration',
+        // Camp
+        camp_title: 'Summer Camp<br>at N.O.A.',
+        camp_text: 'Every summer, Alimos Beach fills with young athletes! Water sports, games, friends and life experiences. Contact us for the schedule.',
+        camp_cta: 'Ask Us',
+        // Events
+        events_label: 'Events',
+        events_title: 'Races &<br>Competitions',
+        events_subtitle: 'N.O.A. hosts and organizes high-level competitions at Alimos Beach.',
+        // News
+        news_label: 'Latest News',
+        news_title: 'What\'s happening<br>at N.O.A.',
+        news_all: 'All News',
+        // Gallery
+        gallery_label: 'Gallery & Social',
+        gallery_title: 'Moments at<br>Sea',
+        gallery_subtitle: 'Photos from races, lessons and life at N.O.A. Follow us!',
+        ig_cta: 'Follow us on Instagram →',
+        // Membership
+        member_label: 'Members',
+        member_title: 'Become a member<br>of our family',
+        member_subtitle: 'Contact us for registration and subscription information.',
+        tier_individual: 'Individual', tier_individual_desc: 'For adults who want to engage in water sports.',
+        tier_f1: 'Access to facilities', tier_f2: 'Sport participation', tier_f3: 'Race updates', tier_f4: 'Community networking',
+        tier_family: 'Family', tier_family_desc: 'For parents and children who want to experience the sea together.',
+        tier_ff1: 'Access for parents + kids', tier_ff2: 'Academy participation', tier_ff3: 'Family activities', tier_ff4: 'Event updates', tier_ff5: 'Ask for information',
+        tier_athletic: 'Athletic', tier_athletic_desc: 'For athletes aiming for competitive activity through the Club.',
+        tier_af1: 'Competitive training', tier_af2: 'E.I.O. race participation', tier_af3: 'Athletic support', tier_af4: 'Equipment access',
+        tier_cta: 'Apply for Membership', tier_popular: 'POPULAR',
+        // Weather
+        weather_title: 'Weather — Saronic Gulf', weather_location: 'Alimos Beach, Attica',
+        w_temp: 'Temperature', w_wind: 'Wind', w_sea: 'Wave Height',
+        sponsors_title: 'Institutional Supporters',
+        // Footer
+        footer_desc: 'Nautical Club of Alimos — Registry No. 51. Sailing, SUP, Windsurf, Bic Techno 293 and Kayak at Alimos Beach.',
+        footer_links: 'Links', footer_sports: 'Sports', footer_contact: 'Contact',
+        footer_newsletter: 'Newsletter', newsletter_placeholder: 'Your email...', newsletter_thanks: 'Thank you for subscribing!',
+        footer_copy: '© 2026 Nautical Club of Alimos. All rights reserved.',
+        footer_registry: 'Registry No.: 51 · E.A.A. / G.G.A.: NA01 · Athens Athletic Region',
+        // Cookie consent
+        cookie_text: 'We use cookies for site functionality (Google Maps, Fonts). <a href="mailto:info@noalimou.gr?subject=Privacy">Privacy Policy</a>',
+        cookie_accept: 'Accept'
+      }
+    };
+
+    // Store Greek originals
+    const greekOriginals = {};
+    let currentLang = 'el';
+
+    function toggleLanguage() {
+      if (currentLang === 'el') {
+        switchToEnglish();
+        currentLang = 'en';
+        document.querySelectorAll('.nav__lang').forEach(b => b.textContent = 'GR');
+        document.documentElement.lang = 'en';
+      } else {
+        switchToGreek();
+        currentLang = 'el';
+        document.querySelectorAll('.nav__lang').forEach(b => b.textContent = 'EN');
+        document.documentElement.lang = 'el';
+      }
+    }
+
+    function switchToEnglish() {
+      // Text content
+      document.querySelectorAll('[data-i18n]').forEach(function(el) {
+        var key = el.getAttribute('data-i18n');
+        if (translations.en[key]) {
+          if (!greekOriginals[key]) greekOriginals[key] = el.textContent;
+          el.textContent = translations.en[key];
+        }
+      });
+      // HTML content (titles with <br>)
+      document.querySelectorAll('[data-i18n-html]').forEach(function(el) {
+        var key = el.getAttribute('data-i18n-html');
+        if (translations.en[key]) {
+          if (!greekOriginals[key]) greekOriginals[key] = el.innerHTML;
+          el.innerHTML = translations.en[key];
+        }
+      });
+      // Placeholders
+      document.querySelectorAll('[data-i18n-placeholder]').forEach(function(el) {
+        var key = el.getAttribute('data-i18n-placeholder');
+        if (translations.en[key]) {
+          if (!greekOriginals['ph_'+key]) greekOriginals['ph_'+key] = el.placeholder;
+          el.placeholder = translations.en[key];
+        }
+      });
+    }
+
+    function switchToGreek() {
+      document.querySelectorAll('[data-i18n]').forEach(function(el) {
+        var key = el.getAttribute('data-i18n');
+        if (greekOriginals[key]) el.textContent = greekOriginals[key];
+      });
+      document.querySelectorAll('[data-i18n-html]').forEach(function(el) {
+        var key = el.getAttribute('data-i18n-html');
+        if (greekOriginals[key]) el.innerHTML = greekOriginals[key];
+      });
+      document.querySelectorAll('[data-i18n-placeholder]').forEach(function(el) {
+        var key = el.getAttribute('data-i18n-placeholder');
+        if (greekOriginals['ph_'+key]) el.placeholder = greekOriginals['ph_'+key];
+      });
+    }
+  </script>
+
+  <!-- Cookie Consent -->
+  <div class="cookie-consent" id="cookieConsent" style="display:none;">
+    <p data-i18n-html="cookie_text">Χρησιμοποιούμε cookies για τη λειτουργία του ιστότοπου (Google Maps, Fonts). <a href="mailto:info@noalimou.gr?subject=Privacy" data-i18n="cookie_privacy_link">Πολιτική Απορρήτου</a></p>
+    <button class="cookie-consent__btn" onclick="document.getElementById('cookieConsent').style.display='none'; localStorage.setItem('noa_cookies','1');" data-i18n="cookie_accept">Αποδοχή</button>
+  </div>
+  <script>if(!localStorage.getItem('noa_cookies')){document.getElementById('cookieConsent').style.display='';}</script>
+
+</body>
+</html>
