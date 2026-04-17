@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="el">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NOA CMS — <%= typeof sectionMeta !== 'undefined' ? sectionMeta.label : 'Πίνακας Διαχείρισης' %></title>
+  <link rel="stylesheet" href="/static/admin.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="admin">
+    <!-- Sidebar -->
+    <aside class="sidebar">
+      <a href="/admin" class="sidebar__brand">
+        <span class="sidebar__brand-icon">⛵</span>
+        <div>
+          <div class="sidebar__brand-name">Ν.Ο.Α.</div>
+          <div class="sidebar__brand-sub">Διαχείριση</div>
+        </div>
+      </a>
+      <nav class="sidebar__nav">
+        <% sections.forEach(function(s) { %>
+          <a href="/admin/<%= s.key %>" class="sidebar__link<%= (typeof sectionMeta !== 'undefined' && sectionMeta.key === s.key) ? ' sidebar__link--active' : '' %>">
+            <span class="sidebar__link-icon"><%= s.icon %></span>
+            <span><%= s.label %></span>
+          </a>
+        <% }) %>
+      </nav>
+      <div class="sidebar__actions">
+        <a href="/admin/preview" target="_blank" class="sidebar__btn sidebar__btn--preview">Προεπισκόπηση</a>
+        <button onclick="publishSite()" class="sidebar__btn sidebar__btn--publish">Δημοσίευση</button>
+        <a href="/admin/logout" class="sidebar__btn" style="background:rgba(255,255,255,0.05); color:rgba(255,255,255,0.6); font-size:0.8rem; margin-top:0.5rem;">Αποσύνδεση</a>
+      </div>
+    </aside>
+
+    <!-- Main content -->
+    <main class="main">
+      <% if (typeof saved !== 'undefined' && saved) { %>
+        <div class="toast toast--success" id="toast">
+          Αποθηκεύτηκε επιτυχώς!
+          <button onclick="this.parentElement.remove()" class="toast__close">&times;</button>
+        </div>
+      <% } %>
+      <% if (typeof published !== 'undefined' && published) { %>
+        <div class="toast toast--success" id="toast">
+          Δημοσιεύτηκε επιτυχώς!
+          <button onclick="this.parentElement.remove()" class="toast__close">&times;</button>
+        </div>
+      <% } %>
+      <%- body %>
+    </main>
+  </div>
+
+  <script src="/static/admin.js"></script>
+  <script>
+    // Auto-dismiss toast after 4s
+    const toast = document.getElementById('toast');
+    if (toast) setTimeout(() => toast.remove(), 4000);
+  </script>
+</body>
+</html>

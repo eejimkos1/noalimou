@@ -1,0 +1,9 @@
+<%# field-textarea.ejs — Reusable textarea
+     Expects: name, label, value, hint (optional), rows (optional, default 4) %>
+<div class="form__group">
+  <label class="form__label" for="<%= name %>"><%= label %></label>
+  <% if (typeof hint !== 'undefined' && hint) { %>
+    <div class="form__hint"><%= hint %></div>
+  <% } %>
+  <textarea class="form__textarea" id="<%= name %>" name="<%= name %>" rows="<%= typeof rows !== 'undefined' ? rows : 4 %>"><%= typeof value !== 'undefined' && value !== null ? value : '' %></textarea>
+</div>

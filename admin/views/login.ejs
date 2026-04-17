@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="el">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NOA CMS — Σύνδεση</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+      background: #1a1a2e;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #fff;
+    }
+    .login {
+      background: #fff;
+      border-radius: 16px;
+      padding: 2.5rem;
+      width: 100%;
+      max-width: 400px;
+      margin: 1rem;
+      box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+      color: #1a1a2e;
+    }
+    .login__brand {
+      text-align: center;
+      margin-bottom: 2rem;
+    }
+    .login__icon { font-size: 3rem; margin-bottom: 0.5rem; }
+    .login__title { font-size: 1.3rem; font-weight: 700; }
+    .login__subtitle { font-size: 0.85rem; color: #888; margin-top: 0.25rem; }
+    .login__group {
+      margin-bottom: 1.25rem;
+    }
+    .login__label {
+      display: block;
+      font-weight: 600;
+      font-size: 0.85rem;
+      margin-bottom: 0.4rem;
+      color: #333;
+    }
+    .login__input {
+      width: 100%;
+      padding: 0.75rem 1rem;
+      border: 1.5px solid #ddd;
+      border-radius: 8px;
+      font-family: inherit;
+      font-size: 0.95rem;
+      transition: border-color 0.2s;
+    }
+    .login__input:focus {
+      outline: none;
+      border-color: #4a90d9;
+      box-shadow: 0 0 0 3px rgba(74,144,217,0.1);
+    }
+    .login__btn {
+      width: 100%;
+      padding: 0.85rem;
+      background: #4a90d9;
+      color: #fff;
+      border: none;
+      border-radius: 8px;
+      font-size: 1rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: background 0.2s;
+    }
+    .login__btn:hover { background: #3a7bc8; }
+    .login__error {
+      background: #fff5f5;
+      color: #dc3545;
+      padding: 0.75rem 1rem;
+      border-radius: 8px;
+      font-size: 0.85rem;
+      margin-bottom: 1rem;
+      border: 1px solid #f5c6cb;
+    }
+  </style>
+</head>
+<body>
+  <form class="login" method="POST" action="/admin/login">
+    <div class="login__brand">
+      <div class="login__icon">⛵</div>
+      <div class="login__title">Ν.Ο.Α. — Διαχείριση</div>
+      <div class="login__subtitle">Πίνακας Ελέγχου Περιεχομένου</div>
+    </div>
+    <% if (typeof error !== 'undefined' && error) { %>
+      <div class="login__error"><%= error %></div>
+    <% } %>
+    <div class="login__group">
+      <label class="login__label">Όνομα χρήστη</label>
+      <input class="login__input" type="text" name="username" required autofocus autocomplete="username">
+    </div>
+    <div class="login__group">
+      <label class="login__label">Κωδικός</label>
+      <input class="login__input" type="password" name="password" required autocomplete="current-password">
+    </div>
+    <button type="submit" class="login__btn">Σύνδεση</button>
+  </form>
+</body>
+</html>

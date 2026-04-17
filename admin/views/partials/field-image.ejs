@@ -1,0 +1,24 @@
+<%# field-image.ejs — Image field with URL input + upload + preview
+     Expects: name, label, value, hint (optional) %>
+<div class="form__group">
+  <label class="form__label"><%= label %></label>
+  <% if (typeof hint !== 'undefined' && hint) { %>
+    <div class="form__hint"><%= hint %></div>
+  <% } %>
+  <div class="form__image-wrap">
+    <div class="form__image-preview" id="preview_<%= name %>">
+      <% if (typeof value !== 'undefined' && value) { %>
+        <img src="<%= value %>" alt="Preview">
+      <% } else { %>
+        Χωρίς εικόνα
+      <% } %>
+    </div>
+    <div class="form__image-inputs">
+      <input class="form__input" type="text" id="<%= name %>" name="<%= name %>" value="<%= typeof value !== 'undefined' && value !== null ? value : '' %>" placeholder="URL εικόνας..." onchange="updateImagePreview('<%= name %>')">
+      <label class="form__upload-btn">
+        📁 Ανέβασμα αρχείου
+        <input type="file" class="form__upload-input" accept="image/*" onchange="uploadImage(this, '<%= name %>')">
+      </label>
+    </div>
+  </div>
+</div>

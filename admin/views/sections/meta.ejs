@@ -1,0 +1,104 @@
+<div class="editor__header">
+  <a href="/admin" class="editor__back">&larr;</a>
+  <span class="editor__icon"><%= sectionMeta.icon %></span>
+  <h1 class="editor__title"><%= sectionMeta.label %></h1>
+</div>
+
+<form method="POST" action="/admin/meta" id="sectionForm">
+  <input type="hidden" name="_json" id="jsonData">
+
+  <div class="form">
+    <h3 style="margin-bottom:1rem;">Βασικά SEO</h3>
+    <div class="form__group">
+      <label class="form__label">Τίτλος σελίδας (title tag)</label>
+      <input class="form__input" type="text" data-field="title" value="<%= section.title %>">
+    </div>
+    <div class="form__group">
+      <label class="form__label">Meta Description</label>
+      <textarea class="form__textarea" data-field="description" rows="2"><%= section.description %></textarea>
+    </div>
+    <div class="form__group">
+      <label class="form__label">Keywords</label>
+      <div class="form__hint">Χωρισμένα με κόμμα</div>
+      <textarea class="form__textarea" data-field="keywords" rows="2"><%= section.keywords %></textarea>
+    </div>
+    <div class="form__group">
+      <label class="form__label">Συγγραφέας</label>
+      <input class="form__input" type="text" data-field="author" value="<%= section.author %>">
+    </div>
+    <div class="form__group">
+      <label class="form__label">Canonical URL</label>
+      <input class="form__input" type="text" data-field="canonicalUrl" value="<%= section.canonicalUrl %>">
+    </div>
+  </div>
+
+  <div class="form">
+    <h3 style="margin-bottom:1rem;">Open Graph / Social</h3>
+    <div class="form__group">
+      <label class="form__label">OG Image URL</label>
+      <div class="form__image-wrap">
+        <div class="form__image-preview" id="preview_ogImage">
+          <% if (section.ogImage) { %><img src="<%= section.ogImage %>" alt="Preview"><% } else { %>Χωρίς εικόνα<% } %>
+        </div>
+        <div class="form__image-inputs">
+          <input class="form__input" type="text" data-field="ogImage" value="<%= section.ogImage %>" onchange="updateImagePreview('ogImage', this.value)">
+          <label class="form__upload-btn">
+            📁 Ανέβασμα
+            <input type="file" class="form__upload-input" accept="image/*" onchange="uploadImageToField(this, 'ogImage', 'ogImage')">
+          </label>
+        </div>
+      </div>
+    </div>
+    <div class="form__group">
+      <label class="form__label">OG Description</label>
+      <textarea class="form__textarea" data-field="ogDescription" rows="2"><%= section.ogDescription %></textarea>
+    </div>
+    <div class="form__group">
+      <label class="form__label">Twitter Description</label>
+      <textarea class="form__textarea" data-field="twitterDescription" rows="2"><%= section.twitterDescription %></textarea>
+    </div>
+  </div>
+
+  <div class="form">
+    <h3 style="margin-bottom:1rem;">Εμφάνιση</h3>
+    <div class="form__row">
+      <div class="form__group">
+        <label class="form__label">Theme Color</label>
+        <input class="form__input" type="text" data-field="themeColor" value="<%= section.themeColor %>">
+      </div>
+      <div class="form__group">
+        <label class="form__label">Favicon Emoji</label>
+        <input class="form__input" type="text" data-field="faviconEmoji" value="<%= section.faviconEmoji %>" style="font-size:1.5rem; width:80px;">
+      </div>
+    </div>
+  </div>
+
+  <div class="form">
+    <h3 style="margin-bottom:1rem;">Structured Data (Schema.org)</h3>
+    <div class="form__row">
+      <div class="form__group">
+        <label class="form__label">Τηλέφωνο</label>
+        <input class="form__input" type="text" data-nested="structuredData" data-key="telephone" value="<%= section.structuredData.telephone %>">
+      </div>
+      <div class="form__group">
+        <label class="form__label">Email</label>
+        <input class="form__input" type="text" data-nested="structuredData" data-key="email" value="<%= section.structuredData.email %>">
+      </div>
+    </div>
+    <div class="form__row">
+      <div class="form__group">
+        <label class="form__label">Οδός</label>
+        <input class="form__input" type="text" data-nested="structuredData" data-key="street" value="<%= section.structuredData.address.street %>">
+      </div>
+      <div class="form__group">
+        <label class="form__label">Πόλη</label>
+        <input class="form__input" type="text" data-nested="structuredData" data-key="locality" value="<%= section.structuredData.address.locality %>">
+      </div>
+    </div>
+  </div>
+
+  <div class="form__actions">
+    <button type="submit" class="form__save-btn">Αποθήκευση</button>
+    <a href="/admin/preview" target="_blank" class="form__preview-btn">Προεπισκόπηση</a>
+  </div>
+</form>

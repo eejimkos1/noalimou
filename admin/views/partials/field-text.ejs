@@ -1,0 +1,9 @@
+<%# field-text.ejs — Reusable text input
+     Expects: name, label, value, hint (optional), type (optional, default 'text') %>
+<div class="form__group">
+  <label class="form__label" for="<%= name %>"><%= label %></label>
+  <% if (typeof hint !== 'undefined' && hint) { %>
+    <div class="form__hint"><%= hint %></div>
+  <% } %>
+  <input class="form__input" type="<%= typeof type !== 'undefined' ? type : 'text' %>" id="<%= name %>" name="<%= name %>" value="<%= typeof value !== 'undefined' && value !== null ? value : '' %>">
+</div>

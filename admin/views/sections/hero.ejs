@@ -1,0 +1,128 @@
+<div class="editor__header">
+  <a href="/admin" class="editor__back">&larr;</a>
+  <span class="editor__icon"><%= sectionMeta.icon %></span>
+  <h1 class="editor__title"><%= sectionMeta.label %></h1>
+</div>
+
+<form method="POST" action="/admin/hero" id="sectionForm">
+  <input type="hidden" name="_json" id="jsonData">
+
+  <div class="form">
+    <h3 style="margin-bottom:1rem;">Κείμενα</h3>
+    <div class="form__group">
+      <label class="form__label">Badge (πάνω από τον τίτλο)</label>
+      <input class="form__input" type="text" data-field="badgeText" value="<%= section.badgeText %>">
+    </div>
+    <div class="form__row">
+      <div class="form__group">
+        <label class="form__label">Τίτλος — Γραμμή 1</label>
+        <input class="form__input" type="text" data-field="titleLine1" value="<%= section.titleLine1 %>">
+      </div>
+      <div class="form__group">
+        <label class="form__label">Τίτλος — Accent (χρυσό)</label>
+        <input class="form__input" type="text" data-field="titleAccent" value="<%= section.titleAccent %>">
+      </div>
+    </div>
+    <div class="form__group">
+      <label class="form__label">Υπότιτλος</label>
+      <textarea class="form__textarea" data-field="subtitle" rows="3"><%= section.subtitle %></textarea>
+    </div>
+  </div>
+
+  <div class="form">
+    <h3 style="margin-bottom:1rem;">Φόντο</h3>
+    <div class="form__group">
+      <label class="form__label">URL Video (MP4)</label>
+      <div class="form__hint">Αφήστε κενό αν δεν θέλετε video — θα εμφανιστεί η εικόνα</div>
+      <input class="form__input" type="text" data-field="bgVideoUrl" value="<%= section.bgVideoUrl %>">
+    </div>
+    <div class="form__group">
+      <label class="form__label">URL Εικόνας (fallback / poster)</label>
+      <div class="form__image-wrap">
+        <div class="form__image-preview" id="preview_bgImage">
+          <% if (section.bgImageUrl) { %><img src="<%= section.bgImageUrl %>" alt="Preview"><% } else { %>Χωρίς εικόνα<% } %>
+        </div>
+        <div class="form__image-inputs">
+          <input class="form__input" type="text" data-field="bgImageUrl" value="<%= section.bgImageUrl %>" onchange="updateImagePreview('bgImage', this.value)">
+          <label class="form__upload-btn">
+            📁 Ανέβασμα
+            <input type="file" class="form__upload-input" accept="image/*" onchange="uploadImageToField(this, 'bgImageUrl', 'bgImage')">
+          </label>
+        </div>
+      </div>
+    </div>
+    <div class="form__group">
+      <label class="form__label">Alt text εικόνας</label>
+      <input class="form__input" type="text" data-field="bgImageAlt" value="<%= section.bgImageAlt %>">
+    </div>
+  </div>
+
+  <div class="form">
+    <h3 style="margin-bottom:1rem;">Κουμπιά (Actions)</h3>
+    <div class="form__array" id="actionsArray">
+      <% section.actions.forEach(function(action, i) { %>
+        <div class="form__array-item open" data-index="<%= i %>">
+          <div class="form__array-header" onclick="toggleArrayItem(this)">
+            <span class="form__array-header-title">Κουμπί: <%= action.label %></span>
+            <div class="form__array-header-actions">
+              <button type="button" class="form__array-btn form__array-btn--delete" onclick="event.stopPropagation(); removeArrayItem(this)">🗑</button>
+            </div>
+          </div>
+          <div class="form__array-body">
+            <div class="form__row--3" style="display:grid; grid-template-columns:1fr 1fr auto; gap:0.75rem;">
+              <div class="form__group">
+                <label class="form__label">Κείμενο</label>
+                <input class="form__input" type="text" data-array="actions" data-index="<%= i %>" data-key="label" value="<%= action.label %>">
+              </div>
+              <div class="form__group">
+                <label class="form__label">Link (href)</label>
+                <input class="form__input" type="text" data-array="actions" data-index="<%= i %>" data-key="href" value="<%= action.href %>">
+              </div>
+              <div class="form__group">
+                <label class="form__label">Στυλ</label>
+                <select class="form__select" data-array="actions" data-index="<%= i %>" data-key="style">
+                  <option value="primary" <%= action.style === 'primary' ? 'selected' : '' %>>Primary</option>
+                  <option value="outline" <%= action.style === 'outline' ? 'selected' : '' %>>Outline</option>
+                  <option value="gold" <%= action.style === 'gold' ? 'selected' : '' %>>Gold</option>
+                </select>
+              </div>
+            </div>
+          </div>
+        </div>
+      <% }) %>
+    </div>
+  </div>
+
+  <div class="form">
+    <h3 style="margin-bottom:1rem;">Στατιστικά (Stats)</h3>
+    <div class="form__array" id="statsArray">
+      <% section.stats.forEach(function(stat, i) { %>
+        <div class="form__array-item open" data-index="<%= i %>">
+          <div class="form__array-header" onclick="toggleArrayItem(this)">
+            <span class="form__array-header-title"><%= stat.value %> — <%= stat.label %></span>
+            <div class="form__array-header-actions">
+              <button type="button" class="form__array-btn form__array-btn--delete" onclick="event.stopPropagation(); removeArrayItem(this)">🗑</button>
+            </div>
+          </div>
+          <div class="form__array-body">
+            <div class="form__row">
+              <div class="form__group">
+                <label class="form__label">Τιμή</label>
+                <input class="form__input" type="text" data-array="stats" data-index="<%= i %>" data-key="value" value="<%= stat.value %>">
+              </div>
+              <div class="form__group">
+                <label class="form__label">Ετικέτα</label>
+                <input class="form__input" type="text" data-array="stats" data-index="<%= i %>" data-key="label" value="<%= stat.label %>">
+              </div>
+            </div>
+          </div>
+        </div>
+      <% }) %>
+    </div>
+  </div>
+
+  <div class="form__actions">
+    <button type="submit" class="form__save-btn">Αποθήκευση</button>
+    <a href="/admin/preview" target="_blank" class="form__preview-btn">Προεπισκόπηση</a>
+  </div>
+</form>

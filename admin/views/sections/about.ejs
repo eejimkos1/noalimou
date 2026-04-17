@@ -1,0 +1,90 @@
+<div class="editor__header">
+  <a href="/admin" class="editor__back">&larr;</a>
+  <span class="editor__icon"><%= sectionMeta.icon %></span>
+  <h1 class="editor__title"><%= sectionMeta.label %></h1>
+</div>
+
+<form method="POST" action="/admin/about" id="sectionForm">
+  <input type="hidden" name="_json" id="jsonData">
+
+  <div class="form">
+    <h3 style="margin-bottom:1rem;">Επικεφαλίδα</h3>
+    <div class="form__group">
+      <label class="form__label">Ετικέτα ενότητας</label>
+      <input class="form__input" type="text" data-field="sectionLabel" value="<%= section.sectionLabel %>">
+    </div>
+    <div class="form__group">
+      <label class="form__label">Τίτλος</label>
+      <div class="form__hint">Χρήση &lt;br&gt; για αλλαγή γραμμής</div>
+      <input class="form__input" type="text" data-field="title" value="<%= section.title %>">
+    </div>
+    <div class="form__group">
+      <label class="form__label">Περιγραφή</label>
+      <textarea class="form__textarea" data-field="description" rows="4"><%= section.description %></textarea>
+    </div>
+  </div>
+
+  <div class="form">
+    <h3 style="margin-bottom:1rem;">Εικόνα</h3>
+    <div class="form__group">
+      <label class="form__label">Εικόνα ενότητας</label>
+      <div class="form__image-wrap">
+        <div class="form__image-preview" id="preview_aboutImage">
+          <% if (section.imageUrl) { %><img src="<%= section.imageUrl %>" alt="Preview"><% } else { %>Χωρίς εικόνα<% } %>
+        </div>
+        <div class="form__image-inputs">
+          <input class="form__input" type="text" data-field="imageUrl" value="<%= section.imageUrl %>" onchange="updateImagePreview('aboutImage', this.value)">
+          <label class="form__upload-btn">
+            📁 Ανέβασμα
+            <input type="file" class="form__upload-input" accept="image/*" onchange="uploadImageToField(this, 'imageUrl', 'aboutImage')">
+          </label>
+        </div>
+      </div>
+    </div>
+    <div class="form__group">
+      <label class="form__label">Alt εικόνας</label>
+      <input class="form__input" type="text" data-field="imageAlt" value="<%= section.imageAlt %>">
+    </div>
+  </div>
+
+  <div class="form">
+    <h3 style="margin-bottom:1rem;">Αξίες (4 κάρτες)</h3>
+    <div class="form__array" id="valuesArray">
+      <% section.values.forEach(function(val, i) { %>
+        <div class="form__array-item" data-index="<%= i %>">
+          <div class="form__array-header" onclick="toggleArrayItem(this)">
+            <span class="form__array-header-title"><%= val.icon %> <%= val.title %></span>
+            <div class="form__array-header-actions">
+              <button type="button" class="form__array-btn" onclick="event.stopPropagation(); moveArrayItem(this, -1)" title="Πάνω">↑</button>
+              <button type="button" class="form__array-btn" onclick="event.stopPropagation(); moveArrayItem(this, 1)" title="Κάτω">↓</button>
+              <button type="button" class="form__array-btn form__array-btn--delete" onclick="event.stopPropagation(); removeArrayItem(this)" title="Διαγραφή">🗑</button>
+              <span class="form__array-toggle" style="cursor:pointer;">▼</span>
+            </div>
+          </div>
+          <div class="form__array-body">
+            <div class="form__row" style="grid-template-columns:80px 1fr 1fr;">
+              <div class="form__group">
+                <label class="form__label">Εικονίδιο</label>
+                <input class="form__input" type="text" data-array="values" data-index="<%= i %>" data-key="icon" value="<%= val.icon %>" style="font-size:1.5rem; text-align:center;">
+              </div>
+              <div class="form__group">
+                <label class="form__label">Τίτλος</label>
+                <input class="form__input" type="text" data-array="values" data-index="<%= i %>" data-key="title" value="<%= val.title %>">
+              </div>
+              <div class="form__group">
+                <label class="form__label">Κείμενο</label>
+                <input class="form__input" type="text" data-array="values" data-index="<%= i %>" data-key="text" value="<%= val.text %>">
+              </div>
+            </div>
+          </div>
+        </div>
+      <% }) %>
+    </div>
+    <button type="button" class="form__add-btn" onclick="addAboutValue()">+ Προσθήκη Αξίας</button>
+  </div>
+
+  <div class="form__actions">
+    <button type="submit" class="form__save-btn">Αποθήκευση</button>
+    <a href="/admin/preview" target="_blank" class="form__preview-btn">Προεπισκόπηση</a>
+  </div>
+</form>

@@ -1,0 +1,614 @@
+{
+  "meta": {
+    "title": "Ν.Ο.Α. — Ναυτικός Όμιλος Αλίμου",
+    "description": "Ναυτικός Όμιλος Αλίμου — Ιστιοπλοΐα, SUP, Windsurf, Bic Techno 293 και Kayak στην Παραλία Αλίμου. Αρ. Μητρώου 51.",
+    "keywords": "Ναυτικός Όμιλος Αλίμου, NOA, ΝΟΑ, ιστιοπλοΐα Άλιμος, SUP Άλιμος, windsurf Αλίμου, kayak Σαρωνικός, θαλάσσια αθλήματα Αθήνα, sailing club Athens, Bic Techno 293",
+    "author": "Ναυτικός Όμιλος Αλίμου",
+    "canonicalUrl": "https://www.noalimou.gr/",
+    "ogImage": "https://images.unsplash.com/photo-1602877641253-3a985752a0d4?w=1200&q=80",
+    "ogDescription": "Ιστιοπλοΐα, SUP, Windsurf, Bic Techno 293 και Kayak στην Παραλία Αλίμου. Γίνε μέλος!",
+    "twitterDescription": "Θαλάσσια αθλήματα στην Παραλία Αλίμου — Ιστιοπλοΐα, SUP, Windsurf, Bic Techno 293 και Kayak",
+    "themeColor": "#1A3A6B",
+    "faviconEmoji": "⛵",
+    "structuredData": {
+      "telephone": "+302109838358",
+      "email": "info@noalimou.gr",
+      "address": {
+        "street": "Παλαιά Λουτρά Αλίμου, Παραλία Αλίμου",
+        "locality": "Άλιμος",
+        "region": "Αττική",
+        "country": "GR"
+      },
+      "geo": {
+        "lat": 37.91,
+        "lng": 23.71
+      },
+      "sports": [
+        "Sailing",
+        "Stand Up Paddleboarding",
+        "Windsurfing",
+        "Bic Techno 293",
+        "Kayaking"
+      ],
+      "sameAs": [
+        "https://www.instagram.com/noalimou"
+      ]
+    }
+  },
+  "header": {
+    "logoUrl": "https://www.eio.gr/wp-content/uploads/2025/10/%CE%91%CE%9B%CE%99%CE%9C%CE%9F%CE%A5site.jpg",
+    "logoAlt": "NOA Logo",
+    "brandName": "Ν.Ο.Α.",
+    "brandSubtitle": "Ναυτικός Όμιλος Αλίμου",
+    "navLinks": [
+      {
+        "label": "Ο Όμιλος",
+        "href": "#about"
+      },
+      {
+        "label": "Αθλήματα",
+        "href": "#sports"
+      },
+      {
+        "label": "Ακαδημίες",
+        "href": "#academy"
+      },
+      {
+        "label": "Εκδηλώσεις",
+        "href": "#events"
+      },
+      {
+        "label": "Νέα",
+        "href": "#news"
+      },
+      {
+        "label": "Γκαλερί",
+        "href": "#gallery"
+      },
+      {
+        "label": "Επικοινωνία",
+        "href": "#contact"
+      }
+    ],
+    "ctaLabel": "Εγγραφή",
+    "ctaHref": "#membership"
+  },
+  "hero": {
+    "badgeText": "Παραλία Αλίμου — Αθήνα",
+    "titleLine1": "Ναυτικός Όμιλος",
+    "titleAccent": "Αλίμου",
+    "subtitle": "Στην Παραλία Αλίμου, στα νερά του Σαρωνικού. Ιστιοπλοΐα, SUP, Windsurf, Bic Techno 293 και Kayak — για κάθε ηλικία, για κάθε επίπεδο.",
+    "bgVideoUrl": "https://assets.mixkit.co/videos/51441/51441-720.mp4",
+    "bgImageUrl": "https://images.unsplash.com/photo-1717054373412-570fb5250052?w=1920&q=80",
+    "bgImageAlt": "Ιστιοπλοΐα στον Σαρωνικό",
+    "actions": [
+      {
+        "label": "Γίνε Μέλος",
+        "href": "#membership",
+        "style": "primary"
+      },
+      {
+        "label": "Τα Αθλήματά μας",
+        "href": "#sports",
+        "style": "outline"
+      }
+    ],
+    "stats": [
+      {
+        "value": "5",
+        "label": "Αθλήματα"
+      },
+      {
+        "value": "#51",
+        "label": "Αρ. Μητρώου"
+      },
+      {
+        "value": "Ε.Ι.Ο.",
+        "label": "Μέλος Ομοσπονδίας"
+      },
+      {
+        "value": "ΝΑ01",
+        "label": "Ε.Α.Α. / Γ.Γ.Α."
+      }
+    ]
+  },
+  "about": {
+    "sectionLabel": "Ο Όμιλός μας",
+    "title": "Στην καρδιά<br>της Αθηναϊκής Ριβιέρας",
+    "description": "Ο Ναυτικός Όμιλος Αλίμου (Αρ. Μητρώου 51, Περιφέρεια Αθηνών) εδρεύει στα Παλαιά Λουτρά Αλίμου, στην Παραλία Αλίμου. Μέλος της Ελληνικής Ιστιοπλοϊκής Ομοσπονδίας (Ε.Ι.Ο.), διοργανώνουμε πανελλήνια πρωταθλήματα και υποδεχόμαστε αθλητές κάθε ηλικίας — από τα πρώτα βήματα στο νερό μέχρι τους αγώνες υψηλού επιπέδου.",
+    "imageUrl": "https://images.unsplash.com/photo-1569263979104-865ab7cd8d13?w=800&q=80",
+    "imageAlt": "Παραλία Αλίμου",
+    "values": [
+      {
+        "icon": "⚓",
+        "title": "Παράδοση",
+        "text": "Αθλητική ιστορία στον Σαρωνικό"
+      },
+      {
+        "icon": "✌",
+        "title": "Οικογένεια",
+        "text": "Ένα σπίτι για γονείς και παιδιά"
+      },
+      {
+        "icon": "🏆",
+        "title": "Αριστεία",
+        "text": "Διοργανωτής Πανελλήνιων Πρωταθλημάτων"
+      },
+      {
+        "icon": "🌊",
+        "title": "Τοποθεσία",
+        "text": "Παλαιά Λουτρά, Παραλία Αλίμου"
+      }
+    ]
+  },
+  "sports": {
+    "sectionLabel": "Αθλήματα",
+    "title": "Βρες το δικό σου<br>άθλημα",
+    "subtitle": "5 αθλήματα, αμέτρητες εμπειρίες. Ό,τι κι αν σε τραβάει, η θάλασσα σε περιμένει.",
+    "cards": [
+      {
+        "name": "Ιστιοπλοΐα",
+        "description": "Optimist, ILCA, Techno 293 — από τα πρώτα μαθήματα μέχρι τους πανελλήνιους αγώνες.",
+        "icon": "⛵",
+        "imageUrl": "https://images.unsplash.com/photo-1540946485063-a40da27545f8?w=600&q=80",
+        "imageAlt": "Ιστιοπλοΐα",
+        "linkText": "Μάθε Περισσότερα"
+      },
+      {
+        "name": "SUP",
+        "description": "Stand Up Paddleboarding για χαλάρωση ή αγώνες — ιδανικό για όλες τις ηλικίες.",
+        "icon": "🛶",
+        "imageUrl": "https://images.unsplash.com/photo-1630521692330-997922b87e5a?w=600&q=80",
+        "imageAlt": "SUP",
+        "linkText": "Μάθε Περισσότερα"
+      },
+      {
+        "name": "Windsurf",
+        "description": "Αδρεναλίνη και ελευθερία πάνω στα κύματα. Μαθήματα για αρχάριους και προχωρημένους.",
+        "icon": "🌬",
+        "imageUrl": "https://images.unsplash.com/photo-1530870110042-98b2cb110834?w=600&q=80",
+        "imageAlt": "Windsurf",
+        "linkText": "Μάθε Περισσότερα"
+      },
+      {
+        "name": "Bic Techno 293",
+        "description": "Η τέλεια εισαγωγή στο windsurf. Σταθερό, ασφαλές, ιδανικό για νέους αθλητές.",
+        "icon": "🏊",
+        "imageUrl": "https://images.unsplash.com/photo-1531722569936-825d3dd91b15?w=600&q=80",
+        "imageAlt": "Bic Techno 293",
+        "linkText": "Μάθε Περισσότερα"
+      },
+      {
+        "name": "Kayak",
+        "description": "Εξερεύνησε τις ακτές του Σαρωνικού. Sea kayaking, touring και αγωνιστικό.",
+        "icon": "🚣",
+        "imageUrl": "https://images.unsplash.com/photo-1472745433479-4556f22e32c2?w=600&q=80",
+        "imageAlt": "Kayak",
+        "linkText": "Μάθε Περισσότερα"
+      }
+    ],
+    "quiz": {
+      "title": "Ποιο άθλημα σου ταιριάζει;",
+      "subtitle": "Διάλεξε τι σου αρέσει και θα σου πούμε!",
+      "options": [
+        {
+          "label": "Ταχύτητα",
+          "key": "speed",
+          "result": "⛵ Windsurf — Ταχύτητα και αδρεναλίνη στα κύματα!"
+        },
+        {
+          "label": "Χαλάρωση",
+          "key": "relax",
+          "result": "🛶 SUP — Ηρεμία πάνω στο νερό, στον δικό σου ρυθμό!"
+        },
+        {
+          "label": "Ομαδικά",
+          "key": "team",
+          "result": "⛵ Ιστιοπλοΐα — Συνεργασία, στρατηγική, θάλασσα!"
+        },
+        {
+          "label": "Εξερεύνηση",
+          "key": "explore",
+          "result": "🚣 Kayak — Εξερεύνησε κρυφές ακτές και σπηλιές!"
+        },
+        {
+          "label": "Κύματα",
+          "key": "waves",
+          "result": "🏊 Bic Techno 293 — Δάμασε τον αέρα πάνω στα κύματα!"
+        }
+      ]
+    }
+  },
+  "academy": {
+    "sectionLabel": "Ακαδημίες Νέων",
+    "title": "Από αρχάριος<br>σε πρωταθλητή",
+    "subtitle": "Οι ακαδημίες μας εισάγουν τα παιδιά στον κόσμο των θαλάσσιων αθλημάτων, βήμα βήμα — από τη γνωριμία με τη θάλασσα μέχρι τη συμμετοχή σε αγώνες.",
+    "imageUrl": "https://images.unsplash.com/photo-1717054373388-b405bfd27707?w=800&q=80",
+    "imageAlt": "Νεαροί αθλητές στη θάλασσα",
+    "ctaLabel": "Εγγραφή Ακαδημιών",
+    "ctaHref": "mailto:info@noalimou.gr",
+    "steps": [
+      {
+        "number": 1,
+        "title": "Γνωριμία με τη Θάλασσα",
+        "text": "Βασικές δεξιότητες, ασφάλεια στο νερό, παιχνίδι και εξοικείωση.",
+        "badgeText": "Αρχάριοι",
+        "badgeClass": "beginner"
+      },
+      {
+        "number": 2,
+        "title": "Αθλητική Ανάπτυξη",
+        "text": "Τεχνική εκπαίδευση, πρώτοι αγώνες, ομαδικό πνεύμα.",
+        "badgeText": "Μέσοι",
+        "badgeClass": "intermediate"
+      },
+      {
+        "number": 3,
+        "title": "Αγωνιστικό Τμήμα",
+        "text": "Πανελλήνιοι αγώνες, υψηλός ανταγωνισμός, εξέλιξη στον αθλητισμό.",
+        "badgeText": "Προχωρημένοι",
+        "badgeClass": "advanced"
+      }
+    ]
+  },
+  "camp": {
+    "icon": "☀️",
+    "title": "Summer Camp<br>στον Ν.Ο.Α.",
+    "text": "Κάθε καλοκαίρι, η Παραλία Αλίμου γεμίζει νεαρούς αθλητές! Θαλάσσια αθλήματα, παιχνίδι, φίλοι και εμπειρίες ζωής. Επικοινωνήστε μαζί μας για το πρόγραμμα.",
+    "bgImageUrl": "https://images.unsplash.com/photo-1636395480274-1af355931159?w=1920&q=80",
+    "bgImageAlt": "Καλοκαίρι στη θάλασσα",
+    "features": [
+      {
+        "icon": "⛵",
+        "label": "Ιστιοπλοΐα"
+      },
+      {
+        "icon": "🛶",
+        "label": "SUP"
+      },
+      {
+        "icon": "🌬",
+        "label": "Windsurf"
+      },
+      {
+        "icon": "🚣",
+        "label": "Kayak"
+      },
+      {
+        "icon": "🏊",
+        "label": "Bic Techno 293"
+      }
+    ],
+    "ctaLabel": "Ρωτήστε μας",
+    "ctaHref": "mailto:info@noalimou.gr?subject=Summer%20Camp"
+  },
+  "events": {
+    "sectionLabel": "Εκδηλώσεις",
+    "title": "Αγώνες &<br>Διοργανώσεις",
+    "subtitle": "Ο Ν.Ο.Α. φιλοξενεί και διοργανώνει αγώνες υψηλού επιπέδου στην Παραλία Αλίμου.",
+    "cards": [
+      {
+        "dateDay": "06",
+        "dateMonth": "Οκτ",
+        "category": "Windsurf",
+        "title": "Πανελλήνιο Techno 293",
+        "description": "Το Πανελλήνιο Πρωτάθλημα Techno 293 & 293 Plus φιλοξενήθηκε στον Ν.Ο.Α. — 94 σκάφη, 10 ιστιοδρομίες!",
+        "tagText": "Techno 293",
+        "tagClass": "windsurf"
+      },
+      {
+        "dateDay": "03",
+        "dateMonth": "Ιούν",
+        "category": "Ιστιοπλοΐα",
+        "title": "ILCA 6 & 7 Masters",
+        "description": "Ανοιχτό Πανελλήνιο ILCA 6 & 7 Masters — Άψογη διοργάνωση του Ν.Ο.Α. Κόντης 2ος, Μαλλή 3η στο ILCA 6.",
+        "tagText": "ILCA Masters",
+        "tagClass": "sailing"
+      },
+      {
+        "dateDay": "27",
+        "dateMonth": "Μάι",
+        "category": "Ιστιοπλοΐα",
+        "title": "My First Race 2023",
+        "description": "Πανελλήνιος διασυλλογικός αγώνας Optimist για νεαρούς αθλητές (γενν. 2011+), σε συνεργασία με Ε.Ι.Ο. και Δήμο Αλίμου.",
+        "tagText": "Optimist",
+        "tagClass": "sailing"
+      }
+    ]
+  },
+  "news": {
+    "sectionLabel": "Τελευταία Νέα",
+    "title": "Τι γίνεται<br>στον Ν.Ο.Α.",
+    "allNewsLabel": "Όλα τα Νέα",
+    "allNewsUrl": "https://www.instagram.com/noalimou",
+    "cards": [
+      {
+        "imageUrl": "https://images.unsplash.com/photo-1602877641253-3a985752a0d4?w=600&q=80",
+        "imageAlt": "Πανελλήνιο Πρωτάθλημα Techno 293",
+        "date": "6 Οκτωβρίου 2025",
+        "title": "Με επιτυχία το Πανελλήνιο Πρωτάθλημα Techno 293 στον Άλιμο",
+        "excerpt": "Ο Ν.Ο.Α. φιλοξένησε με μεγάλη επιτυχία το Πανελλήνιο Πρωτάθλημα Techno 293 & 293 Plus — 10 ιστιοδρομίες, 94 σκάφη, πολύ δυνατός αγώνας!",
+        "linkUrl": "https://www.eio.gr/me-epitychia-oloklirothike-to-panellinio-protathlima-techno293-ston-alimo/",
+        "linkText": "Διάβασε περισσότερα"
+      },
+      {
+        "imageUrl": "https://images.unsplash.com/photo-1540946485063-a40da27545f8?w=600&q=80",
+        "imageAlt": "ILCA Masters",
+        "date": "3 Ιουνίου 2024",
+        "title": "Τα συγχαρητήρια όλων για τη διοργάνωση ILCA 6 & 7 Masters",
+        "excerpt": "Ο Ν.Ο.Α. απέσπασε τα συγχαρητήρια για την άψογη διοργάνωση. Ο Αντώνης Κόντης 2ος και η Τριανταφυλλιά Μαλλή 3η στο ILCA 6!",
+        "linkUrl": "https://www.eio.gr/ta-sygcharitiria-olon-apespase-o-n-o-alimou-gia-tin-apsogi-diorganosi-tou-panelliniou-protathlimatos-ilca-6-kai-ilca-7-masters/",
+        "linkText": "Διάβασε περισσότερα"
+      },
+      {
+        "imageUrl": "https://images.unsplash.com/photo-1630521692330-997922b87e5a?w=600&q=80",
+        "imageAlt": "Εγγραφές 2026",
+        "date": "Απρίλιος 2026",
+        "title": "Ξεκίνησαν οι εγγραφές για τη νέα αγωνιστική σεζόν 2026",
+        "excerpt": "Εγγραφές σε όλα τα αθλήματα — Ιστιοπλοΐα, Windsurf, Bic Techno 293, SUP και Kayak. Επικοινωνήστε μαζί μας!",
+        "linkUrl": "mailto:info@noalimou.gr?subject=Εγγραφές%202026",
+        "linkText": "Επικοινωνία"
+      }
+    ]
+  },
+  "gallery": {
+    "sectionLabel": "Γκαλερί & Social",
+    "title": "Στιγμές στη<br>θάλασσα",
+    "subtitle": "Φωτογραφίες από τους αγώνες, τα μαθήματα και τη ζωή στον Ν.Ο.Α. Ακολούθησέ μας!",
+    "images": [
+      {
+        "url": "https://images.unsplash.com/photo-1540946485063-a40da27545f8?w=800&q=80",
+        "alt": "Ιστιοπλοΐα αγώνας",
+        "wide": true,
+        "tall": false
+      },
+      {
+        "url": "https://images.unsplash.com/photo-1530870110042-98b2cb110834?w=600&q=80",
+        "alt": "Windsurf",
+        "wide": false,
+        "tall": false
+      },
+      {
+        "url": "https://images.unsplash.com/photo-1630521692330-997922b87e5a?w=600&q=80",
+        "alt": "SUP",
+        "wide": false,
+        "tall": false
+      },
+      {
+        "url": "https://images.unsplash.com/photo-1472745433479-4556f22e32c2?w=600&q=80",
+        "alt": "Kayak",
+        "wide": false,
+        "tall": false
+      },
+      {
+        "url": "https://images.unsplash.com/photo-1636395480274-1af355931159?w=800&q=80",
+        "alt": "Ηλιοβασίλεμα Σαρωνικός",
+        "wide": true,
+        "tall": false
+      },
+      {
+        "url": "https://images.unsplash.com/photo-1602877641253-3a985752a0d4?w=600&q=80",
+        "alt": "Σαρωνικός Κόλπος",
+        "wide": false,
+        "tall": false
+      },
+      {
+        "url": "https://images.unsplash.com/photo-1531722569936-825d3dd91b15?w=600&q=80",
+        "alt": "Νεαροί αθλητές",
+        "wide": false,
+        "tall": false
+      }
+    ],
+    "social": {
+      "instagramHandle": "@noalimou",
+      "instagramUrl": "https://www.instagram.com/noalimou",
+      "instagramName": "Ναυτικός Όμιλος Αλίμου",
+      "instagramImages": [
+        {
+          "url": "https://images.unsplash.com/photo-1540946485063-a40da27545f8?w=300&q=80",
+          "alt": "NOA Instagram 1"
+        },
+        {
+          "url": "https://images.unsplash.com/photo-1530870110042-98b2cb110834?w=300&q=80",
+          "alt": "NOA Instagram 2"
+        },
+        {
+          "url": "https://images.unsplash.com/photo-1630521692330-997922b87e5a?w=300&q=80",
+          "alt": "NOA Instagram 3"
+        },
+        {
+          "url": "https://images.unsplash.com/photo-1472745433479-4556f22e32c2?w=300&q=80",
+          "alt": "NOA Instagram 4"
+        },
+        {
+          "url": "https://images.unsplash.com/photo-1636395480274-1af355931159?w=300&q=80",
+          "alt": "NOA Instagram 5"
+        },
+        {
+          "url": "https://images.unsplash.com/photo-1531722569936-825d3dd91b15?w=300&q=80",
+          "alt": "NOA Instagram 6"
+        }
+      ]
+    }
+  },
+  "membership": {
+    "sectionLabel": "Μέλη",
+    "title": "Γίνε μέλος<br>της οικογένειάς μας",
+    "subtitle": "Επικοινωνήστε μαζί μας για πληροφορίες εγγραφής και συνδρομών.",
+    "tiers": [
+      {
+        "icon": "⚓",
+        "title": "Ατομικό",
+        "description": "Για ενήλικες που θέλουν να ασχοληθούν με τα θαλάσσια αθλήματα.",
+        "features": [
+          "Πρόσβαση στις εγκαταστάσεις",
+          "Συμμετοχή σε αθλήματα",
+          "Ενημέρωση για αγώνες",
+          "Δικτύωση με την κοινότητα"
+        ],
+        "ctaLabel": "Αίτηση Εγγραφής",
+        "ctaHref": "mailto:info@noalimou.gr?subject=Εγγραφή%20Ατομικό",
+        "ctaStyle": "primary",
+        "featured": false
+      },
+      {
+        "icon": "👨‍👩‍👧‍👦",
+        "title": "Οικογενειακό",
+        "description": "Για γονείς και παιδιά που θέλουν να ζήσουν τη θάλασσα μαζί.",
+        "features": [
+          "Πρόσβαση για γονείς + παιδιά",
+          "Συμμετοχή σε ακαδημίες",
+          "Οικογενειακές δραστηριότητες",
+          "Ενημέρωση για εκδηλώσεις",
+          "Ζητήστε πληροφορίες"
+        ],
+        "ctaLabel": "Αίτηση Εγγραφής",
+        "ctaHref": "mailto:info@noalimou.gr?subject=Εγγραφή%20Οικογενειακό",
+        "ctaStyle": "gold",
+        "featured": true
+      },
+      {
+        "icon": "🏆",
+        "title": "Αθλητικό",
+        "description": "Για αθλητές που στοχεύουν σε αγωνιστική δραστηριότητα μέσω του Ομίλου.",
+        "features": [
+          "Αγωνιστική προπόνηση",
+          "Συμμετοχή σε αγώνες Ε.Ι.Ο.",
+          "Αθλητική υποστήριξη",
+          "Χρήση εξοπλισμού"
+        ],
+        "ctaLabel": "Αίτηση Εγγραφής",
+        "ctaHref": "mailto:info@noalimou.gr?subject=Εγγραφή%20Αθλητικό",
+        "ctaStyle": "primary",
+        "featured": false
+      }
+    ]
+  },
+  "weather": {
+    "title": "Καιρός — Σαρωνικός",
+    "location": "Παραλία Αλίμου, Αττική",
+    "lat": 37.91,
+    "lng": 23.71,
+    "defaults": {
+      "temp": "24°",
+      "wind": "12kn",
+      "sea": "0.5m"
+    }
+  },
+  "sponsors": {
+    "title": "Θεσμικοί Υποστηρικτές",
+    "items": [
+      {
+        "name": "Δήμος Αλίμου",
+        "logoUrl": ""
+      },
+      {
+        "name": "Ε.Ι.Ο.",
+        "logoUrl": ""
+      },
+      {
+        "name": "Γ.Γ.Α.",
+        "logoUrl": ""
+      },
+      {
+        "name": "Ε.Α.Α.",
+        "logoUrl": ""
+      },
+      {
+        "name": "Περιφέρεια Αττικής",
+        "logoUrl": ""
+      },
+      {
+        "name": "Υποστηρικτής",
+        "logoUrl": ""
+      }
+    ]
+  },
+  "footer": {
+    "brandName": "Ν.Ο.Α.",
+    "brandDesc": "Ναυτικός Όμιλος Αλίμου — Αρ. Μητρώου 51. Ιστιοπλοΐα, SUP, Windsurf, Bic Techno 293 και Kayak στην Παραλία Αλίμου.",
+    "socialLinks": [
+      {
+        "platform": "instagram",
+        "url": "https://www.instagram.com/noalimou"
+      },
+      {
+        "platform": "youtube",
+        "url": "https://www.youtube.com/results?search_query=%CE%9D%CE%B1%CF%85%CF%84%CE%B9%CE%BA%CF%8C%CF%82+%CE%8C%CE%BC%CE%B9%CE%BB%CE%BF%CF%82+%CE%91%CE%BB%CE%AF%CE%BC%CE%BF%CF%85"
+      }
+    ],
+    "quickLinks": [
+      {
+        "label": "Ο Όμιλος",
+        "href": "#about"
+      },
+      {
+        "label": "Αθλήματα",
+        "href": "#sports"
+      },
+      {
+        "label": "Ακαδημίες",
+        "href": "#academy"
+      },
+      {
+        "label": "Εκδηλώσεις",
+        "href": "#events"
+      },
+      {
+        "label": "Γκαλερί",
+        "href": "#gallery"
+      },
+      {
+        "label": "Εγγραφή",
+        "href": "#membership"
+      }
+    ],
+    "sportLinks": [
+      {
+        "label": "Ιστιοπλοΐα",
+        "href": "#sports"
+      },
+      {
+        "label": "SUP",
+        "href": "#sports"
+      },
+      {
+        "label": "Windsurf",
+        "href": "#sports"
+      },
+      {
+        "label": "Bic Techno 293",
+        "href": "#sports"
+      },
+      {
+        "label": "Kayak",
+        "href": "#sports"
+      }
+    ],
+    "contact": {
+      "address": "Παλαιά Λουτρά Αλίμου\nΠαραλία Αλίμου\nΆλιμος, Αθηνών",
+      "phone": "210 983 8358",
+      "phoneHref": "tel:2109838358",
+      "email": "info@noalimou.gr"
+    },
+    "newsletter": {
+      "placeholder": "Το email σας...",
+      "buttonText": "OK",
+      "successMessage": "Ευχαριστούμε!"
+    },
+    "mapEmbedUrl": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3147.3!2d23.7095!3d37.9105!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14a1bb16c1c5e92d%3A0x271a39bc2cb1e765!2zzqDOsc-BzrHOu86vzqwgzpHOu86vzrzOv8-F!5e0!3m2!1sel!2sgr!4v1700000000000!5m2!1sel!2sgr",
+    "copyrightText": "© 2026 Ναυτικός Όμιλος Αλίμου. Με επιφύλαξη παντός δικαιώματος.",
+    "registryText": "Αρ. Μητρώου: 51 · Ε.Α.Α. / Γ.Γ.Α.: ΝΑ01 · Αγωνιστική Περιφέρεια Αθηνών"
+  },
+  "floatingCta": {
+    "phone": {
+      "href": "tel:2109838358",
+      "tooltip": "210 983 8358"
+    },
+    "email": {
+      "href": "mailto:info@noalimou.gr",
+      "tooltip": "info@noalimou.gr"
+    }
+  },
+  "build": {}
+}

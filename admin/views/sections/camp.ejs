@@ -1,0 +1,98 @@
+<div class="editor__header">
+  <a href="/admin" class="editor__back">&larr;</a>
+  <span class="editor__icon"><%= sectionMeta.icon %></span>
+  <h1 class="editor__title"><%= sectionMeta.label %></h1>
+</div>
+
+<form method="POST" action="/admin/camp" id="sectionForm">
+  <input type="hidden" name="_json" id="jsonData">
+
+  <div class="form">
+    <h3 style="margin-bottom:1rem;">Κείμενα</h3>
+    <div class="form__group">
+      <label class="form__label">Εικονίδιο</label>
+      <input class="form__input" type="text" data-field="icon" value="<%= section.icon %>" style="font-size:1.5rem; width:80px;">
+    </div>
+    <div class="form__group">
+      <label class="form__label">Τίτλος</label>
+      <div class="form__hint">Χρήση &lt;br&gt; για αλλαγή γραμμής</div>
+      <input class="form__input" type="text" data-field="title" value="<%= section.title %>">
+    </div>
+    <div class="form__group">
+      <label class="form__label">Κείμενο</label>
+      <textarea class="form__textarea" data-field="text" rows="3"><%= section.text %></textarea>
+    </div>
+  </div>
+
+  <div class="form">
+    <h3 style="margin-bottom:1rem;">Φόντο</h3>
+    <div class="form__group">
+      <label class="form__label">Εικόνα φόντου</label>
+      <div class="form__image-wrap">
+        <div class="form__image-preview" id="preview_campBg">
+          <% if (section.bgImageUrl) { %><img src="<%= section.bgImageUrl %>" alt="Preview"><% } else { %>Χωρίς εικόνα<% } %>
+        </div>
+        <div class="form__image-inputs">
+          <input class="form__input" type="text" data-field="bgImageUrl" value="<%= section.bgImageUrl %>" onchange="updateImagePreview('campBg', this.value)">
+          <label class="form__upload-btn">
+            📁 Ανέβασμα
+            <input type="file" class="form__upload-input" accept="image/*" onchange="uploadImageToField(this, 'bgImageUrl', 'campBg')">
+          </label>
+        </div>
+      </div>
+    </div>
+    <div class="form__group">
+      <label class="form__label">Alt εικόνας</label>
+      <input class="form__input" type="text" data-field="bgImageAlt" value="<%= section.bgImageAlt %>">
+    </div>
+  </div>
+
+  <div class="form">
+    <h3 style="margin-bottom:1rem;">Features (αθλήματα)</h3>
+    <div class="form__array" id="featuresArray">
+      <% section.features.forEach(function(feat, i) { %>
+        <div class="form__array-item" data-index="<%= i %>">
+          <div class="form__array-header" onclick="toggleArrayItem(this)">
+            <span class="form__array-header-title"><%= feat.icon %> <%= feat.label %></span>
+            <div class="form__array-header-actions">
+              <button type="button" class="form__array-btn form__array-btn--delete" onclick="event.stopPropagation(); removeArrayItem(this)" title="Διαγραφή">🗑</button>
+              <span class="form__array-toggle" style="cursor:pointer;">▼</span>
+            </div>
+          </div>
+          <div class="form__array-body">
+            <div class="form__row">
+              <div class="form__group">
+                <label class="form__label">Εικονίδιο</label>
+                <input class="form__input" type="text" data-array="features" data-index="<%= i %>" data-key="icon" value="<%= feat.icon %>" style="font-size:1.5rem;">
+              </div>
+              <div class="form__group">
+                <label class="form__label">Ετικέτα</label>
+                <input class="form__input" type="text" data-array="features" data-index="<%= i %>" data-key="label" value="<%= feat.label %>">
+              </div>
+            </div>
+          </div>
+        </div>
+      <% }) %>
+    </div>
+    <button type="button" class="form__add-btn" onclick="addCampFeature()">+ Προσθήκη Feature</button>
+  </div>
+
+  <div class="form">
+    <h3 style="margin-bottom:1rem;">CTA Κουμπί</h3>
+    <div class="form__row">
+      <div class="form__group">
+        <label class="form__label">Κείμενο κουμπιού</label>
+        <input class="form__input" type="text" data-field="ctaLabel" value="<%= section.ctaLabel %>">
+      </div>
+      <div class="form__group">
+        <label class="form__label">URL κουμπιού</label>
+        <input class="form__input" type="text" data-field="ctaHref" value="<%= section.ctaHref %>">
+      </div>
+    </div>
+  </div>
+
+  <div class="form__actions">
+    <button type="submit" class="form__save-btn">Αποθήκευση</button>
+    <a href="/admin/preview" target="_blank" class="form__preview-btn">Προεπισκόπηση</a>
+  </div>
+</form>

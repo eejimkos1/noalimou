@@ -1,0 +1,143 @@
+<div class="editor__header">
+  <a href="/admin" class="editor__back">&larr;</a>
+  <span class="editor__icon"><%= sectionMeta.icon %></span>
+  <h1 class="editor__title"><%= sectionMeta.label %></h1>
+</div>
+
+<form method="POST" action="/admin/gallery" id="sectionForm">
+  <input type="hidden" name="_json" id="jsonData">
+
+  <div class="form">
+    <h3 style="margin-bottom:1rem;">Επικεφαλίδα</h3>
+    <div class="form__group">
+      <label class="form__label">Ετικέτα ενότητας</label>
+      <input class="form__input" type="text" data-field="sectionLabel" value="<%= section.sectionLabel %>">
+    </div>
+    <div class="form__group">
+      <label class="form__label">Τίτλος</label>
+      <div class="form__hint">Χρήση &lt;br&gt; για αλλαγή γραμμής</div>
+      <input class="form__input" type="text" data-field="title" value="<%= section.title %>">
+    </div>
+    <div class="form__group">
+      <label class="form__label">Υπότιτλος</label>
+      <textarea class="form__textarea" data-field="subtitle" rows="2"><%= section.subtitle %></textarea>
+    </div>
+  </div>
+
+  <div class="form">
+    <h3 style="margin-bottom:1rem;">Φωτογραφίες</h3>
+    <div class="form__array" id="imagesArray">
+      <% section.images.forEach(function(img, i) { %>
+        <div class="form__array-item" data-index="<%= i %>">
+          <div class="form__array-header" onclick="toggleArrayItem(this)">
+            <span class="form__array-header-title"><%= img.alt %><%= img.wide ? ' (πλατιά)' : '' %></span>
+            <div class="form__array-header-actions">
+              <button type="button" class="form__array-btn" onclick="event.stopPropagation(); moveArrayItem(this, -1)" title="Πάνω">↑</button>
+              <button type="button" class="form__array-btn" onclick="event.stopPropagation(); moveArrayItem(this, 1)" title="Κάτω">↓</button>
+              <button type="button" class="form__array-btn form__array-btn--delete" onclick="event.stopPropagation(); removeArrayItem(this)" title="Διαγραφή">🗑</button>
+              <span class="form__array-toggle" style="cursor:pointer;">▼</span>
+            </div>
+          </div>
+          <div class="form__array-body">
+            <div class="form__group">
+              <label class="form__label">Εικόνα</label>
+              <div class="form__image-wrap">
+                <div class="form__image-preview" id="preview_gallery_<%= i %>">
+                  <% if (img.url) { %><img src="<%= img.url %>" alt="Preview"><% } else { %>Χωρίς εικόνα<% } %>
+                </div>
+                <div class="form__image-inputs">
+                  <input class="form__input" type="text" data-array="images" data-index="<%= i %>" data-key="url" value="<%= img.url %>" onchange="updateImagePreview('gallery_<%= i %>', this.value)">
+                  <label class="form__upload-btn">
+                    📁 Ανέβασμα
+                    <input type="file" class="form__upload-input" accept="image/*" onchange="uploadImageToField(this, null, 'gallery_<%= i %>')">
+                  </label>
+                </div>
+              </div>
+            </div>
+            <div class="form__group">
+              <label class="form__label">Alt κείμενο</label>
+              <input class="form__input" type="text" data-array="images" data-index="<%= i %>" data-key="alt" value="<%= img.alt %>">
+            </div>
+            <div class="form__row">
+              <div class="form__group">
+                <label class="form__label">Πλατιά (2 στήλες)</label>
+                <select class="form__select" data-array="images" data-index="<%= i %>" data-key="wide">
+                  <option value="false" <%= !img.wide ? 'selected' : '' %>>Όχι</option>
+                  <option value="true" <%= img.wide ? 'selected' : '' %>>Ναι</option>
+                </select>
+              </div>
+              <div class="form__group">
+                <label class="form__label">Ψηλή (2 σειρές)</label>
+                <select class="form__select" data-array="images" data-index="<%= i %>" data-key="tall">
+                  <option value="false" <%= !img.tall ? 'selected' : '' %>>Όχι</option>
+                  <option value="true" <%= img.tall ? 'selected' : '' %>>Ναι</option>
+                </select>
+              </div>
+            </div>
+          </div>
+        </div>
+      <% }) %>
+    </div>
+    <button type="button" class="form__add-btn" onclick="addGalleryImage()">+ Προσθήκη Εικόνας</button>
+  </div>
+
+  <div class="form">
+    <h3 style="margin-bottom:1rem;">Social — Instagram</h3>
+    <div class="form__row">
+      <div class="form__group">
+        <label class="form__label">Instagram Handle</label>
+        <input class="form__input" type="text" data-nested="social" data-key="instagramHandle" value="<%= section.social.instagramHandle %>">
+      </div>
+      <div class="form__group">
+        <label class="form__label">Instagram URL</label>
+        <input class="form__input" type="text" data-nested="social" data-key="instagramUrl" value="<%= section.social.instagramUrl %>">
+      </div>
+    </div>
+    <div class="form__group">
+      <label class="form__label">Όνομα προφίλ</label>
+      <input class="form__input" type="text" data-nested="social" data-key="instagramName" value="<%= section.social.instagramName %>">
+    </div>
+
+    <h4 style="margin:1.5rem 0 0.75rem;">Εικόνες Instagram (6 φωτό)</h4>
+    <div class="form__array" id="instagramArray">
+      <% section.social.instagramImages.forEach(function(img, i) { %>
+        <div class="form__array-item" data-index="<%= i %>">
+          <div class="form__array-header" onclick="toggleArrayItem(this)">
+            <span class="form__array-header-title">IG φωτό <%= i + 1 %></span>
+            <div class="form__array-header-actions">
+              <button type="button" class="form__array-btn form__array-btn--delete" onclick="event.stopPropagation(); removeArrayItem(this)" title="Διαγραφή">🗑</button>
+              <span class="form__array-toggle" style="cursor:pointer;">▼</span>
+            </div>
+          </div>
+          <div class="form__array-body">
+            <div class="form__group">
+              <label class="form__label">URL εικόνας</label>
+              <div class="form__image-wrap">
+                <div class="form__image-preview" id="preview_ig_<%= i %>">
+                  <% if (img.url) { %><img src="<%= img.url %>" alt="Preview"><% } else { %>Χωρίς εικόνα<% } %>
+                </div>
+                <div class="form__image-inputs">
+                  <input class="form__input" type="text" data-nested="social" data-nestedarray="instagramImages" data-index="<%= i %>" data-key="url" value="<%= img.url %>" onchange="updateImagePreview('ig_<%= i %>', this.value)">
+                  <label class="form__upload-btn">
+                    📁 Ανέβασμα
+                    <input type="file" class="form__upload-input" accept="image/*" onchange="uploadImageToField(this, null, 'ig_<%= i %>')">
+                  </label>
+                </div>
+              </div>
+            </div>
+            <div class="form__group">
+              <label class="form__label">Alt</label>
+              <input class="form__input" type="text" data-nested="social" data-nestedarray="instagramImages" data-index="<%= i %>" data-key="alt" value="<%= img.alt %>">
+            </div>
+          </div>
+        </div>
+      <% }) %>
+    </div>
+    <button type="button" class="form__add-btn" onclick="addInstagramImage()">+ Προσθήκη IG Φωτό</button>
+  </div>
+
+  <div class="form__actions">
+    <button type="submit" class="form__save-btn">Αποθήκευση</button>
+    <a href="/admin/preview" target="_blank" class="form__preview-btn">Προεπισκόπηση</a>
+  </div>
+</form>

@@ -1,0 +1,87 @@
+<div class="editor__header">
+  <a href="/admin" class="editor__back">&larr;</a>
+  <span class="editor__icon"><%= sectionMeta.icon %></span>
+  <h1 class="editor__title"><%= sectionMeta.label %></h1>
+</div>
+
+<form method="POST" action="/admin/weather" id="sectionForm">
+  <input type="hidden" name="_json" id="jsonData">
+
+  <div class="form">
+    <h3 style="margin-bottom:1rem;">Καιρός</h3>
+    <div class="form__group">
+      <label class="form__label">Τίτλος widget</label>
+      <input class="form__input" type="text" data-field="title" value="<%= data.weather.title %>">
+    </div>
+    <div class="form__group">
+      <label class="form__label">Τοποθεσία (κείμενο)</label>
+      <input class="form__input" type="text" data-field="location" value="<%= data.weather.location %>">
+    </div>
+    <div class="form__row">
+      <div class="form__group">
+        <label class="form__label">Γεωγρ. πλάτος (lat)</label>
+        <input class="form__input" type="text" data-field="lat" value="<%= data.weather.lat %>">
+      </div>
+      <div class="form__group">
+        <label class="form__label">Γεωγρ. μήκος (lng)</label>
+        <input class="form__input" type="text" data-field="lng" value="<%= data.weather.lng %>">
+      </div>
+    </div>
+    <h4 style="margin:1.5rem 0 0.75rem;">Εναλλακτικές τιμές (fallback)</h4>
+    <div class="form__row" style="grid-template-columns:1fr 1fr 1fr;">
+      <div class="form__group">
+        <label class="form__label">Θερμοκρασία</label>
+        <input class="form__input" type="text" data-nested="defaults" data-key="temp" value="<%= data.weather.defaults.temp %>">
+      </div>
+      <div class="form__group">
+        <label class="form__label">Άνεμος</label>
+        <input class="form__input" type="text" data-nested="defaults" data-key="wind" value="<%= data.weather.defaults.wind %>">
+      </div>
+      <div class="form__group">
+        <label class="form__label">Κυματισμός</label>
+        <input class="form__input" type="text" data-nested="defaults" data-key="sea" value="<%= data.weather.defaults.sea %>">
+      </div>
+    </div>
+  </div>
+
+  <div class="form">
+    <h3 style="margin-bottom:1rem;">Υποστηρικτές / Χορηγοί</h3>
+    <div class="form__group">
+      <label class="form__label">Τίτλος ενότητας</label>
+      <input class="form__input" type="text" data-field="sponsorsTitle" value="<%= data.sponsors.title %>">
+    </div>
+    <div class="form__array" id="sponsorsArray">
+      <% data.sponsors.items.forEach(function(sp, i) { %>
+        <div class="form__array-item" data-index="<%= i %>">
+          <div class="form__array-header" onclick="toggleArrayItem(this)">
+            <span class="form__array-header-title"><%= sp.name %></span>
+            <div class="form__array-header-actions">
+              <button type="button" class="form__array-btn" onclick="event.stopPropagation(); moveArrayItem(this, -1)" title="Πάνω">↑</button>
+              <button type="button" class="form__array-btn" onclick="event.stopPropagation(); moveArrayItem(this, 1)" title="Κάτω">↓</button>
+              <button type="button" class="form__array-btn form__array-btn--delete" onclick="event.stopPropagation(); removeArrayItem(this)" title="Διαγραφή">🗑</button>
+              <span class="form__array-toggle" style="cursor:pointer;">▼</span>
+            </div>
+          </div>
+          <div class="form__array-body">
+            <div class="form__row">
+              <div class="form__group">
+                <label class="form__label">Όνομα</label>
+                <input class="form__input" type="text" data-array="items" data-index="<%= i %>" data-key="name" value="<%= sp.name %>">
+              </div>
+              <div class="form__group">
+                <label class="form__label">Logo URL</label>
+                <input class="form__input" type="text" data-array="items" data-index="<%= i %>" data-key="logoUrl" value="<%= sp.logoUrl %>">
+              </div>
+            </div>
+          </div>
+        </div>
+      <% }) %>
+    </div>
+    <button type="button" class="form__add-btn" onclick="addSponsor()">+ Προσθήκη Υποστηρικτή</button>
+  </div>
+
+  <div class="form__actions">
+    <button type="submit" class="form__save-btn">Αποθήκευση</button>
+    <a href="/admin/preview" target="_blank" class="form__preview-btn">Προεπισκόπηση</a>
+  </div>
+</form>

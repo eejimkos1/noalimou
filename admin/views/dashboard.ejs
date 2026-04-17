@@ -1,0 +1,25 @@
+<div class="dashboard__header">
+  <h1 class="dashboard__title">Πίνακας Διαχείρισης</h1>
+  <p class="dashboard__subtitle">Ναυτικός Όμιλος Αλίμου — Επεξεργασία περιεχομένου</p>
+  <% if (lastBuild) { %>
+    <p class="dashboard__status">Τελευταία δημοσίευση: <strong><%= lastBuild %></strong></p>
+  <% } else { %>
+    <p class="dashboard__status">Δεν έχει γίνει δημοσίευση ακόμα</p>
+  <% } %>
+</div>
+
+<div class="dashboard__actions">
+  <button onclick="publishSite()" class="dashboard__action-btn dashboard__action-btn--publish">Δημοσίευση</button>
+  <a href="/admin/preview" target="_blank" class="dashboard__action-btn dashboard__action-btn--preview">Προεπισκόπηση</a>
+  <a href="/admin/download" class="dashboard__action-btn dashboard__action-btn--download">Λήψη index.html</a>
+</div>
+
+<div class="dashboard__grid" style="margin-top:2rem;">
+  <% sections.forEach(function(s) { %>
+    <a href="/admin/<%= s.key %>" class="dashboard__card">
+      <div class="dashboard__card-icon"><%= s.icon %></div>
+      <div class="dashboard__card-label"><%= s.label %></div>
+      <div class="dashboard__card-hint">Επεξεργασία &rarr;</div>
+    </a>
+  <% }) %>
+</div>
