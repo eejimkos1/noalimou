@@ -2,6 +2,7 @@ const express = require('express');
 const multer = require('multer');
 const path = require('path');
 const fs = require('fs');
+const { execFileSync } = require('child_process');
 const session = require('express-session');
 const bcrypt = require('bcryptjs');
 const crypto = require('crypto');
@@ -22,7 +23,6 @@ app.use(express.urlencoded({ extended: true, limit: '10mb' }));
 app.use(express.json({ limit: '10mb' }));
 app.use('/uploads', express.static(path.join(__dirname, 'public', 'uploads')));
 app.use('/static', express.static(path.join(__dirname, 'public')));
-app.use('/site', express.static(path.join(__dirname, 'dist')));
 
 // Session setup — secret generated randomly on first run
 const SESSION_SECRET_PATH = path.join(__dirname, 'data', '.session-secret');
@@ -201,8 +201,8 @@ app.use('/admin', requireAuth);
 // Dashboard
 app.get('/admin', (req, res) => {
   const data = readData();
-  const lastBuild = fs.existsSync(path.join(__dirname, 'dist', 'index.html'))
-    ? fs.statSync(path.join(__dirname, 'dist', 'index.html')).mtime.toLocaleString('el-GR')
+  const lastBuild = fs.existsSync(path.join(__dirname, 'index.html'))
+    ? fs.statSync(path.join(__dirname, 'index.html')).mtime.toLocaleString('el-GR')
     : null;
   renderPage(res, 'dashboard', { data, sections: SECTIONS, lastBuild, saved: req.query.saved, published: req.query.published });
 });
@@ -217,6 +217,16 @@ app.post('/admin/upload', upload.single('image'), (req, res) => {
 app.post('/admin/build', (req, res) => {
   try {
     const result = build();
+    try {
+      execFileSync('git', ['add', 'index.html', 'data/site.json'], { cwd: __dirname });
+      execFileSync('git', ['commit', '-m', 'Update site content'], { cwd: __dirname });
+      execFileSync('git', ['push', 'origin', 'main'], { cwd: __dirname, timeout: 30000 });
+      result.pushed = true;
+    } catch (gitErr) {
+      console.error('Git push error:', gitErr.message);
+      result.pushed = false;
+      result.gitError = gitErr.message;
+    }
     res.json(result);
   } catch (e) {
     console.error('Build error:', e);
@@ -228,7 +238,7 @@ app.post('/admin/build', (req, res) => {
 app.get('/admin/preview', (req, res) => {
   try {
     build();
-    res.redirect('/site/index.html');
+    res.sendFile(path.join(__dirname, 'index.html'));
   } catch (e) {
     console.error('Preview build error:', e);
     res.status(500).send('Build failed');
@@ -237,7 +247,7 @@ app.get('/admin/preview', (req, res) => {
 
 // Download (BEFORE :section wildcard)
 app.get('/admin/download', (req, res) => {
-  const filePath = path.join(__dirname, 'dist', 'index.html');
+  const filePath = path.join(__dirname, 'index.html');
   if (!fs.existsSync(filePath)) {
     build();
   }

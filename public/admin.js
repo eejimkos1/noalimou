@@ -833,6 +833,9 @@ function publishSite() {
   .then(function(data) {
     if (data.error) {
       alert('Σφάλμα: ' + data.error);
+    } else if (data.pushed === false) {
+      alert('Build OK αλλά αποτυχία push στο GitHub:\n' + (data.gitError || 'Άγνωστο σφάλμα'));
+      window.location.href = '/admin?published=1';
     } else {
       window.location.href = '/admin?published=1';
     }
