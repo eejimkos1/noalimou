@@ -215,9 +215,39 @@ body { font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif; back
 .publish-status h4{font-weight:700;margin-bottom:.75rem}
 .publish-step{display:flex;align-items:center;gap:.5rem}.publish-step.done{color:#28a745}.publish-step.doing{color:#4a90d9}.publish-step.error{color:#dc3545}.publish-step.pending{color:#aaa}
 .sidebar__user{padding:.75rem 1.5rem;font-size:.78rem;color:rgba(255,255,255,.4);border-bottom:1px solid rgba(255,255,255,.08)}
+
+/* Login screen */
+.login-screen{display:flex;align-items:center;justify-content:center;min-height:100vh;background:#f0f2f5;padding:1rem}
+.login-screen.hidden{display:none}
+.login-card{background:#fff;border-radius:16px;padding:2.5rem;width:100%;max-width:400px;box-shadow:0 8px 32px rgba(0,0,0,0.08);border:1px solid #e8eaed;text-align:center}
+.login-card__icon{font-size:3rem;margin-bottom:0.75rem}
+.login-card__title{font-size:1.5rem;font-weight:700;color:#1a1a2e;margin-bottom:0.25rem}
+.login-card__subtitle{font-size:0.9rem;color:#666;margin-bottom:1.5rem}
+.login-card__input{width:100%;padding:0.8rem 1rem;border:1.5px solid #ddd;border-radius:8px;font-family:inherit;font-size:0.95rem;margin-bottom:0.75rem;transition:border-color 0.2s}
+.login-card__input:focus{outline:none;border-color:#4a90d9;box-shadow:0 0 0 3px rgba(74,144,217,0.1)}
+.login-card__btn{width:100%;padding:0.85rem;background:#4a90d9;color:#fff;border:none;border-radius:8px;font-size:1rem;font-weight:600;cursor:pointer;transition:all 0.2s}
+.login-card__btn:hover{background:#3a7bc8;transform:translateY(-1px)}
+.login-card__btn:disabled{opacity:0.6;cursor:not-allowed;transform:none}
+.login-card__error{color:#dc3545;font-size:0.85rem;margin-top:0.75rem;min-height:1.2em}
+.login-card__hint{font-size:0.78rem;color:#888;margin-top:1rem;line-height:1.5}
+.login-card__hint a{color:#4a90d9;text-decoration:none}
+.login-card__hint a:hover{text-decoration:underline}
+.sidebar__btn--logout{background:rgba(220,53,69,0.15);color:#ff6b7a}
+.sidebar__btn--logout:hover{background:rgba(220,53,69,0.25)}
 </style></head><body>
-<div id="loadingOverlay" class="loading-overlay"><div class="loading-spinner"></div><div class="loading-text" id="loadingText">Φόρτωση...</div></div>
-<div class="admin">
+<div id="loginScreen" class="login-screen">
+<div class="login-card">
+<div class="login-card__icon">&#x26F5;</div>
+<h1 class="login-card__title">&#925;.&#927;.&#913;. Admin</h1>
+<p class="login-card__subtitle">&#917;&#953;&#963;&#940;&#947;&#949;&#964;&#949; &#964;&#959; GitHub Token &#963;&#945;&#962;</p>
+<input type="password" id="loginTokenInput" class="login-card__input" placeholder="ghp_..." autocomplete="off">
+<button id="loginBtn" class="login-card__btn" onclick="handleLogin()">&#931;&#973;&#957;&#948;&#949;&#963;&#951;</button>
+<div class="login-card__error" id="loginError"></div>
+<p class="login-card__hint">&#935;&#961;&#949;&#953;&#940;&#950;&#949;&#964;&#945;&#953; Personal Access Token &#956;&#949; &#948;&#953;&#954;&#945;&#953;&#974;&#956;&#945;&#964;&#945; <strong>repo</strong>.<br><a href="https://github.com/settings/tokens" target="_blank">&#916;&#951;&#956;&#953;&#959;&#965;&#961;&#947;&#943;&#945; token &rarr;</a></p>
+</div>
+</div>
+<div id="loadingOverlay" class="loading-overlay hidden"><div class="loading-spinner"></div><div class="loading-text" id="loadingText">&#934;&#972;&#961;&#964;&#969;&#963;&#951;...</div></div>
+<div class="admin hidden" id="adminLayout">
 <nav class="sidebar" id="sidebar">
 <a href="#dashboard" class="sidebar__brand"><span class="sidebar__brand-icon">&#x26F5;</span><div><div class="sidebar__brand-name">&#925;.&#927;.&#913;.</div><div class="sidebar__brand-sub">CMS Admin</div></div></a>
 <div class="sidebar__user" id="sidebarUser">-</div>
@@ -238,7 +268,7 @@ body { font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif; back
 <a href="#header" class="sidebar__link" data-section="header"><span class="sidebar__link-icon">&#x1F517;</span><span>Header Nav</span></a>
 <a href="#settings" class="sidebar__link" data-section="settings"><span class="sidebar__link-icon">&#x2699;&#xFE0F;</span><span>&#929;&#965;&#952;&#956;&#943;&#963;&#949;&#953;&#962;</span></a>
 </nav>
-<div class="sidebar__actions"><button class="sidebar__btn sidebar__btn--preview" onclick="handlePreview()">&#x1F441; Preview</button><button class="sidebar__btn sidebar__btn--publish" onclick="handlePublish()">&#x1F680; &#916;&#951;&#956;&#959;&#963;&#943;&#949;&#965;&#963;&#951;</button></div>
+<div class="sidebar__actions"><button class="sidebar__btn sidebar__btn--preview" onclick="handlePreview()">&#x1F441; Preview</button><button class="sidebar__btn sidebar__btn--publish" onclick="handlePublish()">&#x1F680; &#916;&#951;&#956;&#959;&#963;&#943;&#949;&#965;&#963;&#951;</button><button class="sidebar__btn sidebar__btn--logout" onclick="handleLogout()">&#x1F6AA; &#913;&#960;&#959;&#963;&#973;&#957;&#948;&#949;&#963;&#951;</button></div>
 </nav><main class="main" id="main"></main></div>
 <script src="section-editors.js"></script>
 <script src="build-template.js"></script>
@@ -310,6 +340,69 @@ function addSocialLink(){_mkItem("socialLinksArray","New social",[{l:"URL",arr:"
 function addQuickLink(){_mkItem("quickLinksArray","New link",[{l:"Label",arr:"quickLinks",k:"label"},{l:"Href",arr:"quickLinks",k:"href"}])}
 function addSportLink(){_mkItem("sportLinksArray","New sport link",[{l:"Label",arr:"sportLinks",k:"label"},{l:"Href",arr:"sportLinks",k:"href"}])}
 function addQuizOption(){_mkItem("quizOptionsArray","New option",[{l:"Label",obj:"quiz",oa:"options",k:"label"},{l:"Key",obj:"quiz",oa:"options",k:"key"},{l:"Result",obj:"quiz",oa:"options",k:"result"}])}
-(function init(){document.getElementById("sidebarUser").textContent=ghToken()?"GitHub: OK":"no token";if(!ghToken()){hideLoading();location.hash="settings";route();showToast("Set GitHub Token in Settings");return}loadSiteData().then(function(){hideLoading();route()}).catch(function(e){hideLoading();var m=document.getElementById("main");var er=document.createElement("div");er.style.cssText="padding:2rem;color:#dc3545;";var h=document.createElement("h2");h.textContent="Load error";var p=document.createElement("p");p.textContent=e.message;var a=document.createElement("a");a.href="#settings";a.textContent="Settings";er.appendChild(h);er.appendChild(p);er.appendChild(a);m.appendChild(er);route()})})();
+function showLoginScreen(errMsg){
+  document.getElementById("loginScreen").classList.remove("hidden");
+  document.getElementById("adminLayout").classList.add("hidden");
+  hideLoading();
+  var errEl=document.getElementById("loginError");
+  if(errEl)errEl.textContent=errMsg||"";
+  var inp=document.getElementById("loginTokenInput");
+  if(inp){inp.value="";inp.focus()}
+}
+function showAdminScreen(){
+  document.getElementById("loginScreen").classList.add("hidden");
+  document.getElementById("adminLayout").classList.remove("hidden");
+  document.getElementById("sidebarUser").textContent="GitHub: OK";
+}
+function handleLogin(){
+  var inp=document.getElementById("loginTokenInput");
+  var btn=document.getElementById("loginBtn");
+  var errEl=document.getElementById("loginError");
+  var token=inp.value.trim();
+  if(!token){errEl.textContent="Εισάγετε το token.";return}
+  btn.disabled=true;
+  errEl.textContent="";
+  showLoading("Σύνδεση...");
+  fetch("https://api.github.com/user",{headers:{"Authorization":"token "+token,"Accept":"application/vnd.github.v3+json"}}).then(function(r){
+    if(!r.ok)throw new Error(r.status===401?"Μη έγκυρο token":"Σφάλμα: "+r.status);
+    return r.json();
+  }).then(function(){
+    localStorage.setItem("gh_token",token);
+    return loadSiteData();
+  }).then(function(){
+    hideLoading();
+    showAdminScreen();
+    route();
+    btn.disabled=false;
+  }).catch(function(e){
+    hideLoading();
+    localStorage.removeItem("gh_token");
+    btn.disabled=false;
+    errEl.textContent=e.message;
+  });
+}
+function handleLogout(){
+  localStorage.removeItem("gh_token");
+  siteData={};currentSHA=null;
+  showLoginScreen();
+}
+(function init(){
+  var loginInput=document.getElementById("loginTokenInput");
+  if(loginInput)loginInput.addEventListener("keydown",function(e){if(e.key==="Enter")handleLogin()});
+  if(!ghToken()){showLoginScreen();return}
+  showLoading("Φόρτωση...");
+  document.getElementById("loginScreen").classList.add("hidden");
+  fetch("https://api.github.com/user",{headers:{"Authorization":"token "+ghToken(),"Accept":"application/vnd.github.v3+json"}}).then(function(r){
+    if(!r.ok)throw new Error("Token expired");
+    return loadSiteData();
+  }).then(function(){
+    hideLoading();
+    showAdminScreen();
+    route();
+  }).catch(function(e){
+    localStorage.removeItem("gh_token");
+    showLoginScreen(e.message==="Token expired"?"Το token έληξε. Εισάγετε νέο.":e.message);
+  });
+})();
 </script>
 </body></html>
